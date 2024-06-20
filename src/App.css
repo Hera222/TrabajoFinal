@@ -71,6 +71,9 @@ nav div{
   height: auto;
   
 }
+nav div :hover{
+  color: #E0E1DD;
+}
 nav a{
   display: flex;
   padding-top: 5px;
@@ -78,9 +81,7 @@ nav a{
   color: #E0E1DD;
   width: 100%;
 }
-nav a :hover{
-  color: #415A77;
-}
+
 section{
   width: 100%;
   display: flex;
