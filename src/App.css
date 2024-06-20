@@ -255,6 +255,7 @@ section{
   }
   nav a{
     display: flex;
+    flex-wrap: wrap;
     padding-top: 1px;
   }
   h1{
