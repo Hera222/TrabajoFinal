@@ -51,17 +51,17 @@ function CardCourse() {
           {servicios.map((servicio) => (
             <div className="card h-100 card" key={servicio.id}>
               <img
-                src={servicio.imahen}
+                src={servicio.imagen}
                 className="card-img-top"
-                alt={servicio.imahen}
+                alt={servicio.imagen}
               />
               <div className="card-body">
                 <h5 className="card-title">{servicio.title}</h5>
-                <p className="card-text">{servicio.descrip}</p>
+                <p className="card-text">{servicio.descripcion}</p>
               </div>
               <div className="card-footer">
                 <div className="grup-footer">
-                  <small className="text-muted">{`Duración de los cursos ${servicio.time}`}</small>
+                  <small className="text-muted">{`Duración del curso: ${servicio.time}`}</small>
                   <div>
                   <span><FaRegStar></FaRegStar><FaRegStar></FaRegStar><FaRegStar></FaRegStar><FaRegStar></FaRegStar><FaRegStar></FaRegStar></span>
                   </div>
