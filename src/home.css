@@ -234,7 +234,8 @@ footer h3{
     flex-direction: column;
   }
   .contact {
-    margin-left: 1dvw;
+    margin-left: 0.5dvw;
+    width: 98%;
   }
 
 .ubicacion, .ubicanos, .abour {
