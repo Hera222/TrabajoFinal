@@ -10,7 +10,7 @@ const AcademApp = () => {
   return (
     <Router>
       <header>
-        <h2>CONVIÉRTASE EN UN DESARROLLADOR FULLSTACK</h2>
+        <h1>CONVIÉRTASE EN UN DESARROLLADOR FULLSTACK</h1>
       </header>
       <nav>
         <Menu />

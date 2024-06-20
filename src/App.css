@@ -11,6 +11,7 @@ ul {
 h1 {
   font-size: 3em;
   text-align: center;
+  background-color: #E0E1DD;
 }
 h2 {
   display: flex;
@@ -81,12 +82,11 @@ section{
 
 .marco {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
-  /* 
-  margin: 100px auto; */
+  justify-content: center;
+  align-items: center; 
 }
 
+/*
 .temario {
   display: flex;
   flex-direction: column;
@@ -101,18 +101,18 @@ section{
   align-items: center;
   padding-top: 50px;
   width: 50%;
-}
+}*/
 
 .grupBtn {
   padding: 50px 20%;
 }
 .btnApp {
-  color: white;
+  color:#E0E1DD;
   margin: 5px;
   padding: 8px 20px;
-  border: 1px solid rgb(5, 72, 5);
+  border: 1px solid #1B263B;
   outline: none;
-  background-color: rgb(5, 72, 5);
+  background-color: #1B263B;
   font-size: 1.2em;
   width: 100%;
   cursor: pointer;
@@ -120,25 +120,25 @@ section{
 }
 
 .btnApp:hover {
-  background-color: white;
-  color: black;
+  background-color: #E0E1DD;
+  color: #1B263B;
 }
 /* paginacion */
 .addBtn {
-  background-color: rgb(43, 79, 194);
-  color: white;
+  background-color: #415A77;
+  color: #E0E1DD;
   padding: 3px 5px;
   border: 0;
   margin-left: 20%;
 }
 .addBtn:hover {
-  background-color: rgb(55, 102, 255);
+  background-color: #415A77;
 }
 .btnEdid {
   background-color: transparent;
-  color: black;
+  color: #1B263B;
   padding: 1px 1px;
-  border: 0.4px solid cornsilk;
+  border: 0.4px solid #E0E1DD;;
 }
 .btnShow {
   /* background-color: transparent;
@@ -149,9 +149,9 @@ section{
 }
 .btnDel {
   background-color: transparent;
-  color: black;
+  color: #1B263B;
   padding: 1px 1px;
-  border: 0.4px solid cornsilk;
+  border: 0.4px solid #E0E1DD;;
 }
 /* paginacion */
 .pagination {
@@ -175,30 +175,30 @@ section{
 .pagination > ul > li {
   font-style: none;
   padding: 5px 10px;
-  background-color: rgb(5, 78, 124);
-  background: linear-gradient(to right, #5fa2ff, #867bfe);
+  background-color: #415A77;
+  background: linear-gradient(to right, #778DA9, #778DA9);
   margin: 0 5px;
-  border: 1px solid rgb(5, 78, 124);
+  border: 1px solid #415A77;
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: #E0E1DD;
   font-weight: 500;
 }
 .pagination > ul > li:hover {
-  background-color: white;
+  background-color: #E0E1DD;
   background: linear-gradient(
     to right,
     #ff7e5f,
     #feb47b
   ); /* Cambia los colores según tus preferencias */
 
-  border: 1px solid rgb(5, 78, 124);
-  color: black;
+  border: 1px solid #415A77;
+  color: #1B263B;
 }
 .pagination > ul > li:active {
-  background-color: rgb(189, 16, 99);
-  border: 1px solid rgb(189, 16, 99);
-  color: black;
+  background-color: #778DA9;
+  border: 1px solid #778DA9;
+  color: #1B263B;
 }
 .buttonPagination {
   display: flex;
@@ -206,7 +206,7 @@ section{
   padding-right: 80px;
 }
 .btnPagination {
-  color: black;
+  color: #1B263B;
   background-color: transparent;
   padding: 5px 10px;
   cursor: pointer;
@@ -214,11 +214,11 @@ section{
   margin: 0 5px;
 }
 .btnPagination:hover {
-  background-color: rgb(229, 231, 232);
+  background-color: #E0E1DD;;
 }
 
 .activo {
-  background-color: #0a0346; /* Cambia el color según tus preferencias */
+  background-color: #1B263B;
 }
 
 .textCenter {
