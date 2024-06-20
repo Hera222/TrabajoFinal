@@ -118,7 +118,6 @@ p{
   margin: 0 100px;
   padding: 30px 40px;
   border-radius: 6px;
-  width: 450px;
   box-shadow: 2px 3px 5px 5px rgb(212, 208, 208);
 }
 
@@ -221,7 +220,7 @@ footer h3{
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
-    width: 100%;
+    /*width: 100%;*/
     padding: 10px;
   }
   .card {
