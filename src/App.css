@@ -238,7 +238,6 @@ section{
   margin-bottom: 100px;
 }
 .tittle-search {
-  /* margin-top: 20px; */
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
@@ -252,7 +251,6 @@ section{
 .tittle {
   font-size: 2em;
   font-weight: 600;
-  /* margin-left: 60px; */
 }
 .btn-success{
   background-color: #1B263B;
@@ -276,4 +274,3 @@ section{
     font-size: 2.1em;
   }
 }
-

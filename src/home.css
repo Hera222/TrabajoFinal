@@ -22,11 +22,11 @@ section {
 p{
   text-align: center;
 }
-/*
+
 .aside {
   width: 20%;
   height: 100wh;
-}*/
+}
 
 .section {
   width:90%;
@@ -37,12 +37,12 @@ p{
   justify-content: center;
   align-items: start;
 }
-/*
+
 .courseSection > aside {
   width: 50%;
   display: block;
   align-items: start;
-}*/
+}
 
 .title-camp {
   font-size: 1.1em;
@@ -89,11 +89,11 @@ p{
 .prinSetion {
   display: flex;
 }
-/*
+
 .prinSetion > aside {
   width: 50%;
-}*/
-.prinSetion > img {
+}
+.prinSetion > img > aside {
   width: 100%;
 }
 .cards {
