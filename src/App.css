@@ -82,9 +82,6 @@ nav a{
   width: 100%;
 }
 
-#imgMain{
-  display: flex;
-}
 section{
   width: 100%;
   display: flex;
@@ -200,7 +197,7 @@ section{
     to right,
     #778DA9,
     #415A77
-  ); /* Cambia los colores según tus preferencias */
+  );
 
   border: 1px solid #415A77;
   color: #1B263B;

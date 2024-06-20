@@ -24,6 +24,7 @@ p{
 }
 
 .aside {
+  display: flex;
   width: 20%;
   height: 100wh;
 }
@@ -114,11 +115,6 @@ p{
   text-align: center;
   box-shadow: 4px 3px 3px 2px rgb(212, 208, 208);
 }
-.card-img-top{
-  width: 100%;
-  height: auto;
-}
-
 
 .contact {
   display: flex;
