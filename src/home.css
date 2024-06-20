@@ -20,7 +20,7 @@ header {
   /* background-repeat: no-repeat; */
   color: #E0E1DD;
   font-size: 1.1em;
-  height: 230px;
+  height: 100%;
   font-weight: bold;
 }
 
@@ -170,6 +170,7 @@ h3, .footer-body{
   align-items: start;
   padding: 20px 20px 0 20px;
   width: 32%;
+  color: #E0E1DD;
 }
 
 .footer-footer {
