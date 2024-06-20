@@ -78,6 +78,9 @@ nav a{
   color: #E0E1DD;
   width: 100%;
 }
+nav a :hover{
+  color: #415A77;
+}
 section{
   width: 100%;
   display: flex;
@@ -249,6 +252,7 @@ section{
 }
 .btn-success{
   background-color: #1B263B;
+  border-color: #1B263B;
 }
 @media (max-width: 850px) {
   nav div{
