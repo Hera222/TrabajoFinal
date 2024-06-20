@@ -9,7 +9,7 @@ ul {
   padding: 0;
 }
 h1 {
-  font-size: 3em;
+  font-size: 2.8em;
   text-align: center;
 }
 h2 {
@@ -47,9 +47,8 @@ header {
   color: #E0E1DD;
   height: 180px;
   width: 100%;
-  font-size: 1.1em;
 
-  background: url(../src/assets/title2.jpg);  /*se agrega la imagen al header
+  background: url(../src/assets/title2.jpg); 
 }
 main{
   width: 100%;
@@ -248,3 +247,18 @@ section{
   font-weight: 600;
   /* margin-left: 60px; */
 }
+@media (max-width: 850px) {
+  nav div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1px;
+  }
+  nav a{
+    display: flex;
+    padding-top: 1px;
+  }
+  h1{
+    font-size: 2.1em;
+  }
+}
+
