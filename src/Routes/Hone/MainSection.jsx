@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/wall_paper9";
+import img from "../../assets/wall_paper9.jpg";
 import { useUsersContext } from "../../hooks/UsersContext";
 
 function MainSection() {
