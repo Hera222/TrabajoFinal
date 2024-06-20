@@ -247,6 +247,9 @@ section{
   font-weight: 600;
   /* margin-left: 60px; */
 }
+.btn-success{
+  background-color: #1B263B;
+}
 @media (max-width: 850px) {
   nav div{
     display: flex;

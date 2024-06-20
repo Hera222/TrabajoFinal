@@ -204,7 +204,7 @@ export default function Contact({ contact, edit, riviewList }) {
               </div>
 
               <div className="row mt-3">
-                <label htmlFor="message">Dejanos tu Comentários</label>
+                <label htmlFor="message">Deje sus Comentarios</label>
                 <textarea
                   // type="textarea"
                   className="form-control"

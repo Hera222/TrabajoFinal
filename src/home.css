@@ -18,7 +18,6 @@ section {
   display: flex;
   flex-direction: row;
   width: 100%;
-  /* height: 100vw; */
 }
 /*
 .aside {
@@ -112,7 +111,6 @@ section {
   flex-direction: column;
   justify-content: center;
   margin: 0 100px;
-  /* border: 0.5px solid rgb(182, 180, 180); */
   padding: 30px 40px;
   border-radius: 6px;
   box-shadow: 2px 3px 5px 5px rgb(212, 208, 208);
@@ -191,8 +189,6 @@ footer h3{
   background-color: #415A77;
   color: #E0E1DD;
   font-size: 1.05em;
-  /* margin-left: 2px; */
-  /* border border-gray-300 rounded-md shadow5-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50" */
 }
 
 .btn-submit {
@@ -219,12 +215,3 @@ footer h3{
   width: 96%;
   margin-left: 2%;
 }
-
-/* .btn-segundary,
-.btn-primary {
-  background-color: rgb(38, 38, 196);
-  outline: none;
-  border: 0;
-  width: 25%;
-  border-radius: 50px;
-} */
