@@ -29,7 +29,7 @@ export default function ListMatricula({ title }) {
     { id: 4, nombre: "turno", descrip: "Turno" },
   ];
   function handleAddMatriculas() {
-    const tittle = "Adición de Matrícula";
+    const tittle = "Agregar en Matrícula";
     openModal(
       <Matricula matricula={""} edit={false} riviewList={updateList} />,
       null,
@@ -41,7 +41,7 @@ export default function ListMatricula({ title }) {
   }
 
   function handleEdit(matricula) {
-    const tittle = "Edición de Matrícula";
+    const tittle = "Editar Matrícula";
     openModal(
       <Matricula matricula={matricula} edit={true} riviewList={updateList} />,
       null,
@@ -61,8 +61,8 @@ export default function ListMatricula({ title }) {
 
     const delId = id;
     Swal.fire({
-      title: "Está Seguro?",
-      text: "Desea eliminar este regístro?",
+      title: "¿Está Seguro?",
+      text: "¿Desea eliminar?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -74,8 +74,8 @@ export default function ListMatricula({ title }) {
           const resp = await deleteData(url, delId);
           getMatriculas();
           await Swal.fire({
-            title: "Eliminádo!",
-            text: "El Matricula fué eliminádo.",
+            title: "Eliminado!",
+            text: "Matricula eliminada.",
             icon: "success",
           });
         };
@@ -135,8 +135,8 @@ export default function ListMatricula({ title }) {
                     {/* <th scope="col">#</th> */}
                     <th scope="col">Curso</th>
                     <th scope="col">Profesor</th>
-                    <th scope="col">Alúmno</th>
-                    <th scope="col">Túrno</th>
+                    <th scope="col">Alumno</th>
+                    <th scope="col">Turno</th>
                     <th scope="col" colSpan={2}>
                       Acción
                     </th>

@@ -53,7 +53,7 @@ export default function Curso({ matricula, edit, riviewList }) {
       Swal.fire({
         position: "top",
         icon: "info",
-        title: "Debes corregir la información para poder registrarla",
+        title: "Debe corregir la información para poder registrarla",
         showConfirmButton: false,
         timer: 5000,
       });
@@ -151,14 +151,14 @@ export default function Curso({ matricula, edit, riviewList }) {
                 <aside>
                   <div className="row mt-5">
                     <div className="form-group col-md-12">
-                      <label htmlFor="curso"> Nombre del Curso </label>
+                      <label htmlFor="curso">Nombre del Curso </label>
                       <select
                         name="curso"
                         className="form-control"
                         value={curso}
                         onChange={onInputChangeCourse}
                       >
-                        <option>Seleccione una opción</option>
+                        <option>Seleccionar </option>
                         {courses.map((item) => (
                           <option
                             key={item.id}
@@ -180,7 +180,7 @@ export default function Curso({ matricula, edit, riviewList }) {
                         value={profesor}
                         onChange={onInputChange}
                       >
-                        <option>Seleccione el Profesor</option>
+                        <option>Seleccionar Profesor</option>
                         {teachers.map(
                           (item) =>
                             item.profesor && (
@@ -195,7 +195,7 @@ export default function Curso({ matricula, edit, riviewList }) {
 
                   <div className="row mt-3">
                     <div className="form-group col-md-12">
-                      <label htmlFor="profesor">Nombre del Alumno</label>
+                      <label htmlFor="profesor">Nombre del Alumno </label>
                       <select
                         name="student"
                         className="form-control"
@@ -213,14 +213,14 @@ export default function Curso({ matricula, edit, riviewList }) {
                   </div>
                   <div className="row mt-3">
                     <div className="form-group col-md-12">
-                      <label htmlFor="turno">Seleccione el Turno</label>
+                      <label htmlFor="turno">Seleccione el Turno </label>
                       <select
                         name="turno"
                         className="form-control"
                         value={turno}
                         onChange={onInputChange}
                       >
-                        <option>Seleccióne opción</option>
+                        <option>Seleccionar</option>
                         <option>Mañana</option>
                         <option>Tarde</option>
                         <option>Noche</option>
@@ -230,24 +230,22 @@ export default function Curso({ matricula, edit, riviewList }) {
 
                   <div className="row mt-3">
                     <div className="form-group col-md-6">
-                      <label htmlFor="finicio">Fecha de Início.</label>
+                      <label htmlFor="finicio">Fecha de Inicio </label>
                       <input
                         type="text"
                         className="form-control"
                         name="finicio"
-                        placeholder="Indique la fecha de início"
                         value={finicio}
                         onChange={onInputChange}
                       />
                     </div>
 
                     <div className="form-group col-md-6">
-                      <label htmlFor="ffin">Fecha de Finalización.</label>
+                      <label htmlFor="ffin">Fecha de Finalización </label>
                       <input
                         type="text"
                         className="form-control"
                         name="ffin"
-                        placeholder="Indique la fecha de início"
                         value={ffin}
                         onChange={onInputChange}
                       />
@@ -258,7 +256,7 @@ export default function Curso({ matricula, edit, riviewList }) {
 
               <div className="btn-submit">
                 {edit ? (
-                  <button type="submit" className="btn btn-primary w-100">
+                  <button type="submit" className="btn btn-success w-100">
                     Actualizar
                   </button>
                 ) : (
