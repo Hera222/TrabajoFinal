@@ -93,7 +93,7 @@ p{
 .prinSetion > aside > img {
   width: 100%;
 }
-.row {
+.cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -216,7 +216,7 @@ footer h3{
   .courseSection > aside {
     width: 100%;
   }
-  .row {
+  .cards {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
