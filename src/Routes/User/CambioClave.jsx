@@ -78,7 +78,7 @@ function CambioClave() {
               >
                 <div className="mb-2">
                   <label htmlFor="email" className="form-label">
-                    Dirección de correo electrónico
+                    Email
                   </label>
                   <input
                     type="email"
@@ -146,7 +146,7 @@ function CambioClave() {
                 </div>
                 <div className="mb-2">
                   <label htmlFor="confirmPassword" className="form-label">
-                    Confirme la Nueva Contraseña
+                    Repita Contraseña
                   </label>
                   <div className="input-group">
                     <input

@@ -39,7 +39,7 @@ const Login = () => {
       Swal.fire({
         position: "top",
         icon: "info",
-        title: "Debes corregir la información para loguearse",
+        title: "Debe corregir la información",
         showConfirmButton: false,
         timer: 5000,
       });
@@ -78,13 +78,12 @@ const Login = () => {
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">
-                    Dirección de correo electrónico
+                    Email 
                   </label>
                   <input
                     type="email"
                     name="email"
                     autoComplete="email"
-                    // required
                     value={email}
                     onChange={onInputChange}
                     className="form-control"
@@ -95,14 +94,13 @@ const Login = () => {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="password" className="form-label">
-                    Indique su Contraseña
+                    Contraseña 
                   </label>
                   <div className="input-group">
                     <input
                       type={visible ? "text" : "password"}
                       name="password"
                       autoComplete="current-password"
-                      // required
                       value={password}
                       onChange={onInputChange}
                       className="form-control"

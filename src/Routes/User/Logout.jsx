@@ -25,7 +25,7 @@ function Logout() {
 				timer: 3500,
 			});
 			setUsersContext([]);
-			navigate('/login');
+			navigate('/');
 			window.location.reload(true);
 		} else {
 			Swal.fire({

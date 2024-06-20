@@ -13,8 +13,6 @@ import Login from "./User/Login";
 import Logout from "./User/Logout";
 import Cambio from "./User/CambioClave";
 
-// import Exit from "./components/Exit";
-
 const routes = [
   { path: "/", element: <Home /> },
   {
@@ -31,7 +29,7 @@ const routes = [
   },
   {
     path: "/perfil",
-    element: <Perfil title={"Modicicación de Perfíl de Estudiantes"} />,
+    element: <Perfil title={"Modicicación del Perfil de Estudiantes"} />,
   },
   {
     path: "/teachers",
@@ -51,7 +49,7 @@ const routes = [
   },
   {
     path: "/users",
-    element: <Users title={"Gestión de Usuários"} />,
+    element: <Users title={"Gestión de Usuarios"} />,
   },
   {
     path: "/login",

@@ -62,8 +62,8 @@ export default function ListUser({ title }) {
     const url = `${hostServer}/api/v3/user`;
     const delId = id;
     Swal.fire({
-      title: "Está Seguro?",
-      text: "Desea eliminar este registro?",
+      title: "¿Está Seguro?",
+      text: "¿Desea eliminar este registro?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -75,8 +75,8 @@ export default function ListUser({ title }) {
           const resp = await deleteData(url, delId);
           getUsers();
           await Swal.fire({
-            title: "Eliminádo!",
-            text: "El Usuário fué eliminádo.",
+            title: "Eliminado!",
+            text: "Usuario eliminado.",
             icon: "success",
           });
         };
@@ -138,7 +138,7 @@ export default function ListUser({ title }) {
                   <tr className="table-dark">
                     <th scope="col">#</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Correo Electrónico</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Ciudad</th>
                     <th scope="col" colSpan={3}>
                       Acción
