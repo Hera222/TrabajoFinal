@@ -12,10 +12,10 @@ const AcademApp = () => {
       <header>
         <h2>CONVIÉRTASE EN UN DESARROLLADOR FULLSTACK</h2>
       </header>
+      <nav>
+        <Menu />
+      </nav>
       <main className="main">
-        <div className="aside">
-          <Menu />
-        </div>
         <div className="section">
           <Routes>
             {routes.map((route) => (
