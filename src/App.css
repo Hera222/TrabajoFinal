@@ -46,6 +46,8 @@ header {
   font-weight: bolder;
   color: #E0E1DD;
   height: 180px;
+
+  background: url(../src/assets/title2.jpg);  /*se agrega la imagen al header*/
 }
 main{
   width: 100%;
@@ -188,8 +190,8 @@ section{
   background-color: #E0E1DD;
   background: linear-gradient(
     to right,
-    #ff7e5f,
-    #feb47b
+    #778DA9,
+    #415A77
   ); /* Cambia los colores según tus preferencias */
 
   border: 1px solid #415A77;
