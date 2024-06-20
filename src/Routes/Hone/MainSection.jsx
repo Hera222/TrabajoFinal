@@ -25,7 +25,7 @@ function MainSection() {
               <h3>¡Formando Profesionales!</h3>
             </aside>
             <aside>
-              <img id="imgMain" src={img} alt="" />
+              <img src={img} alt="" />
             </aside>
           </section>
         </div>

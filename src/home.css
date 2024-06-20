@@ -89,6 +89,8 @@ p{
 
 .prinSetion {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .prinSetion > aside {
