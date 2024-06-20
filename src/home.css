@@ -113,6 +113,11 @@ p{
   text-align: center;
   box-shadow: 4px 3px 3px 2px rgb(212, 208, 208);
 }
+.cards img{
+  width: 100%;
+  height: auto;
+}
+
 
 .contact {
   display: flex;
