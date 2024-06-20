@@ -23,12 +23,6 @@ p{
   text-align: center;
 }
 
-.aside {
-  display: flex;
-  width: 20%;
-  height: 100wh;
-}
-
 .section {
   width:90%;
 }
@@ -96,7 +90,7 @@ p{
 .prinSetion > aside {
   width: 50%;
 }
-.prinSetion > img > aside {
+.prinSetion > aside > img {
   width: 100%;
 }
 .cards {
@@ -150,7 +144,6 @@ p{
   margin-top: 120px;
   margin-bottom: 0;
 }
-
 .linea,
 .icon-color {
   color: #415A77;
@@ -169,8 +162,6 @@ p{
 footer h3{
   color: #E0E1DD;
 }
-
-
 .footer-footer {
   display: flex;
   justify-content: center;
@@ -179,37 +170,6 @@ footer h3{
   color:#E0E1DD;
   padding: 20px 0;
   margin-bottom: 0;
-}
-
-@media (max-width: 850px) {
-  .courseSection {
-    display: flex;
-    flex-direction: column;
-  }
-  .cards {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-  }
-  .card {
-  display: flex;
-  width: 100%;
-  text-align: center;
-  padding: 2%;
-  } 
-  .prinSection {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-.ubicacion, .ubicanos, .abour {
-  font-size: smaller;
-}
-
 }
 
 .upload {
@@ -246,4 +206,34 @@ footer h3{
   font-size: large;
   width: 96%;
   margin-left: 2%;
+}
+
+@media (max-width: 850px) {
+  .courseSection {
+    display: flex;
+    flex-direction: column;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .card {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+  } 
+  .prinSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+.ubicacion, .ubicanos, .abour {
+  font-size: smaller;
+}
 }
