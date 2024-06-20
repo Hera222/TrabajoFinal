@@ -12,16 +12,13 @@ export default function Footer() {
       <footer>
         <section className="footer-body">
           <div className="ubicacion">
-            <h3>Puntos de Contactos</h3>
+            <h3>Puntos de Contacto </h3>
             <h5 className="linea">___________</h5>
             <p className="encuentrano">
-              {" "}
-              <PiMapPinLine className="icon-color" /> Primer piso, Sindhu
-              Center, Moon Market, cerca del restaurante Bundu Khan, Allama
-              Iqbal Town, Lahore
+              <PiMapPinLine className="icon-color" /> Avenida Italia 1244
             </p>
             <p className="phone">
-              <BsTelephone className="icon-color" /> +598 543234543
+              <BsTelephone className="icon-color" /> +598 26040501
             </p>
             <p className="correo">
               <MdOutlineMarkEmailRead className="icon-color" /> info@academy.com
@@ -31,14 +28,14 @@ export default function Footer() {
             <h3>About</h3>
             <h5 className="linea">___________</h5>
             <p>
-              Estamos aquí para la comunidad. La misión es hacer que la
+              Estamos aquí para la comunidad. Nuestra misión es lograr que la
               educación de calidad sea asequible y accesible para todos en esta
               región. Es por eso que IT Academy ofrece una variedad de programas
               de TI a costos razonables para los estudiantes.
             </p>
           </div>
           <div className="ubicanos">
-            <h3>Puedes Ubicarnos</h3>
+            <h3>Nuestras Redes </h3>
             <h5 className="linea">___________</h5>
             <h6>
               <ImWhatsapp className="icon-color" /> WhatSapp
