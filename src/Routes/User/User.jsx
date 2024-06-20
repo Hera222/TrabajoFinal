@@ -184,7 +184,7 @@ export default function User({ user, edit, riviewList }) {
                   )}
                 </div>
                 <div className="form-group col-md-6">
-                  <label htmlFor="role">Roles </label>
+                  <label htmlFor="role">Rol </label>
                   <select
                     className="form-control"
                     name="role"
@@ -293,7 +293,7 @@ export default function User({ user, edit, riviewList }) {
                 {edit ? (
                   <button
                     onClick={handleSubmit}
-                    className="btn btn-primary w-100"
+                    className="btn btn-success w-100"
                   >
                     Actualizar
                   </button>
@@ -301,7 +301,7 @@ export default function User({ user, edit, riviewList }) {
                   <button
                     onClick={handleSubmit}
                     type="submit"
-                    className="btn btn-primary w-100"
+                    className="btn btn-success w-100"
                   >
                     Agregar
                   </button>

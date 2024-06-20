@@ -29,7 +29,7 @@ export default function ListTeacher({ title }) {
 
   function handleAddTeachers() {
     const modalNivel = 2;
-    const tittle = "Adición de Profesores";
+    const tittle = "Agregar Profesores";
     openModal(
       <Teacher teacher={""} edit={false} riviewList={updateList} />,
       null,
@@ -41,7 +41,7 @@ export default function ListTeacher({ title }) {
 
   function handleEdit(teacher) {
     const modalNivel = 2;
-    const tittle = "Edición de Profesores";
+    const tittle = "Editar Profesores";
     openModal(
       <Teacher teacher={teacher} edit={true} riviewList={updateList} />,
       null,
@@ -60,7 +60,7 @@ export default function ListTeacher({ title }) {
     const delId = id;
     Swal.fire({
       title: "Está Seguro?",
-      text: "Desea eliminar este regístro?",
+      text: "Desea eliminar?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -72,8 +72,8 @@ export default function ListTeacher({ title }) {
           const resp = await deleteData(url, delId);
           getTeachers();
           await Swal.fire({
-            title: "Eliminádo!",
-            text: "El Estudiante fué eliminádo.",
+            title: "Eliminado!",
+            text: "Registro Eliminado.",
             icon: "success",
           });
         };

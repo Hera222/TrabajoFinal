@@ -67,7 +67,7 @@ export default function Teacher({ teacher, edit, riviewList }) {
       Swal.fire({
         position: "top",
         icon: "info",
-        title: "Debes corregir la información para poder registrarla",
+        title: "Debe corregir la información para poder registrarla",
         showConfirmButton: false,
         timer: 5000,
       });
@@ -157,7 +157,7 @@ export default function Teacher({ teacher, edit, riviewList }) {
                   )}{" "}
                 </div>
                 <div className="form-group col-md-6">
-                  <label htmlFor="inputName">Apelliodos </label>
+                  <label htmlFor="inputName">Apellidos </label>
                   <input
                     type="text"
                     className="form-control"
@@ -173,12 +173,12 @@ export default function Teacher({ teacher, edit, riviewList }) {
               </div>
               <div className="row mt-2">
                 <div className="form-group col-md-6">
-                  <label htmlFor="email">Correo Electrónico</label>
+                  <label htmlFor="email">Email </label>
                   <input
                     type="email"
                     className="form-control"
                     name="email"
-                    placeholder="Ingrese el Coreo Electónico"
+                    placeholder="Ingrese Email"
                     value={email}
                     onChange={onInputChange}
                   />
@@ -192,7 +192,7 @@ export default function Teacher({ teacher, edit, riviewList }) {
                     type="text"
                     className="form-control"
                     name="celular"
-                    placeholder="Ingrese Número Telefónico Celular"
+                    placeholder="Ingrese Celular"
                     value={celular}
                     onChange={onInputChange}
                   />
@@ -200,28 +200,15 @@ export default function Teacher({ teacher, edit, riviewList }) {
                     <ValidateErrors errors={errorsInput.celular} />
                   )}{" "}
                 </div>
-                {/* <div className="form-group col-md-6">
-                  <label htmlFor="fechaNacimiento">Fecha de Nacimiento</label>
-                  <input
-                    type="date"
-                    className="form-control"
-                    name="fechaNacimiento"
-                    step="1"
-                    value={fechaNacimiento}
-                    min="2013-01-01"
-                    max="fechaNacimiento"
-                    onChange={onInputChange}
-                  />
-                </div> */}
               </div>
               <div className="row mt-2">
                 <div className="form-group col-md-6">
-                  <label htmlFor="password">Contraseña</label>
+                  <label htmlFor="password">Contraseña </label>
                   <input
                     type="password"
                     className="form-control"
                     name="password"
-                    placeholder="Indique su contraseña"
+                    placeholder="Ingrese contraseña"
                     value={password}
                     onChange={onInputChange}
                   />
@@ -247,12 +234,12 @@ export default function Teacher({ teacher, edit, riviewList }) {
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="adress">Address</label>
+                <label htmlFor="adress">Dirección </label>
                 <input
                   type="text"
                   className="form-control"
                   name="adress"
-                  placeholder="Indique su dirección principal"
+                  placeholder="Ingrese dirección"
                   value={adress}
                   onChange={onInputChange}
                 />
@@ -260,32 +247,33 @@ export default function Teacher({ teacher, edit, riviewList }) {
 
               <div className="row mt-2">
                 <div className="form-group col-md-6">
-                  <label htmlFor="city">City</label>
+                  <label htmlFor="city">Ciudad </label>
                   <input
                     type="text"
                     className="form-control"
                     name="city"
                     value={city}
+                    placeholder="Ingrese ciudad"
                     onChange={onInputChange}
                   />
                 </div>
                 <div className="form-group col-md-4">
-                  <label htmlFor="condicion">Estátus</label>
+                  <label htmlFor="condicion">Estatus</label>
                   <select
                     name="condicion"
                     className="form-control"
                     value={condicion}
                     onChange={onInputChange}
                   >
-                    <option>Seleccióne opción</option>
-                    <option>Actívo</option>
-                    <option>No Actívo</option>
+                    <option>Seleccionar </option>
+                    <option>Activo</option>
+                    <option>No Activo</option>
                   </select>
                 </div>
               </div>
               <div className="btn-submit mt-4">
                 {edit ? (
-                  <button type="submit" className="btn btn-primary w-100">
+                  <button type="submit" className="btn btn-success w-100">
                     Actualizar
                   </button>
                 ) : (

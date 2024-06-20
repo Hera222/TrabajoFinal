@@ -171,7 +171,7 @@ function CambioClave() {
                     </button>
                   </div>
                   <input
-                    className="btn btn-primary w-100 mt-4"
+                    className="btn btn-success w-100 mt-4"
                     required
                     value="Guardar"
                     type="submit"

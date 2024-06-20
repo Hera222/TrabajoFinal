@@ -32,7 +32,7 @@ export default function ListUser({ title }) {
 
   function handleAddUsers() {
     const modalNivel = 2;
-    const tittle = "Adición de Usuarios";
+    const tittle = "Agregar Usuarios";
     openModal(
       <User user={""} edit={false} riviewList={updateList} />,
       null,
@@ -44,7 +44,7 @@ export default function ListUser({ title }) {
 
   function handleEdit(user) {
     const modalNivel = 2;
-    const tittle = "Edición de Usuários";
+    const tittle = "Editar Usuarios";
     openModal(
       <User user={user} edit={true} riviewList={updateList} />,
       null,
@@ -63,7 +63,7 @@ export default function ListUser({ title }) {
     const delId = id;
     Swal.fire({
       title: "¿Está Seguro?",
-      text: "¿Desea eliminar este registro?",
+      text: "¿Desea eliminar?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",

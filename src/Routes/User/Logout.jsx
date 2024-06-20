@@ -31,7 +31,7 @@ function Logout() {
 			Swal.fire({
 				position: 'top',
 				icon: 'info',
-				title: 'Debes corregir la información para loguearse',
+				title: 'Debe corregir la información para loguearse',
 				showConfirmButton: false,
 				timer: 5000,
 			});
