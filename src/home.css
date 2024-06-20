@@ -13,16 +13,6 @@ section {
   display: flex;
   margin-bottom: 50px;
 }
-/*
-header {
-  width: 100%;
-  background: url(../src/assets/title2.jpg);
-  color: #E0E1DD;
-  font-size: 1.1em;
-  height: 180px;
-  font-weight: bold;
-}*/
-
 
 .main {
   display: flex;
@@ -96,7 +86,6 @@ header {
 
 .prinSetion {
   display: flex;
-  /* justify-content: space-between; */
 }
 .prinSetion > aside {
   width: 50%;
@@ -142,9 +131,7 @@ header {
 }
 
 .footer-body {
-  /* 
-  width: 100%;
-  */
+  
   display: flex;
   align-items: start;
   justify-content: space-around;
@@ -152,9 +139,6 @@ header {
   
   margin-top: 120px;
   margin-bottom: 0;
-}
-h3, .footer-body{
-  color: #E0E1DD;
 }
 
 .linea,
@@ -172,6 +156,10 @@ h3, .footer-body{
   width: 32%;
   color: #E0E1DD;
 }
+footer h3{
+  color: #E0E1DD;
+}
+
 
 .footer-footer {
   display: flex;

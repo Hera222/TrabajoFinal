@@ -21,8 +21,8 @@ export default function User({ user, edit, riviewList }) {
   ];
 
   const estatus = [
-    { id: 1, descrip: "Actívo" },
-    { id: 2, descrip: "No Actívo" },
+    { id: 1, descrip: "Activo" },
+    { id: 2, descrip: "No Activo" },
   ];
 
   const initialForm = {
@@ -129,7 +129,7 @@ export default function User({ user, edit, riviewList }) {
                     type="text"
                     className="form-control"
                     name="dni"
-                    placeholder="Ingrese número de documento"
+                    placeholder="Ingrese DNI"
                     value={dni}
                     onChange={onInputChange}
                   />
@@ -154,7 +154,7 @@ export default function User({ user, edit, riviewList }) {
                   )}
                 </div>
                 <div className="form-group col-md-6">
-                  <label htmlFor="inputName">Apelliodos </label>
+                  <label htmlFor="inputName">Apellidos </label>
                   <input
                     type="text"
                     className="form-control"
@@ -170,12 +170,12 @@ export default function User({ user, edit, riviewList }) {
               </div>
               <div className="row mt-3">
                 <div className="form-group col-md-6">
-                  <label htmlFor="email">Correo Electrónico</label>
+                  <label htmlFor="email">Email </label>
                   <input
                     type="email"
                     className="form-control"
                     name="email"
-                    placeholder="Ingrese el Coreo Electónico"
+                    placeholder="Ingrese Email"
                     value={email}
                     onChange={onInputChange}
                   />
@@ -184,14 +184,14 @@ export default function User({ user, edit, riviewList }) {
                   )}
                 </div>
                 <div className="form-group col-md-6">
-                  <label htmlFor="role">Roles</label>
+                  <label htmlFor="role">Roles </label>
                   <select
                     className="form-control"
                     name="role"
                     value={role}
                     onChange={onInputChange}
                   >
-                    <option>Seleccione el Role...</option>
+                    <option>Seleccione </option>
                     {roles.map((item) => {
                       return (
                         <option key={item.id} value={item.role}>
@@ -204,13 +204,13 @@ export default function User({ user, edit, riviewList }) {
               </div>
               <div className="row mt-3">
                 <div className="form-group col-md-6">
-                  <label htmlFor="password">Contraseña</label>
+                  <label htmlFor="password">Contraseña </label>
                   <input
                     type="password"
                     autoComplete="on"
                     className="form-control"
                     name="password"
-                    placeholder="Indique su contraseña"
+                    placeholder="Ingrese contraseña"
                     value={password}
                     onChange={onInputChange}
                   />
@@ -220,14 +220,14 @@ export default function User({ user, edit, riviewList }) {
                 </div>
                 <div className="form-group col-md-6">
                   <label htmlFor="confirmPassword">
-                    Confirmación de Contraseña
+                    Repita Contraseña 
                   </label>
                   <input
                     type="Password"
                     className="form-control"
                     autoComplete="on"
                     name="confirmPassword"
-                    placeholder="Indique su contraseña"
+                    placeholder="Repita contraseña"
                     value={confirmPassword}
                     onChange={onInputChange}
                   />
@@ -237,36 +237,37 @@ export default function User({ user, edit, riviewList }) {
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="adress">Address</label>
+                <label htmlFor="adress">Dirección </label>
                 <input
                   type="text"
                   className="form-control"
                   name="adress"
-                  placeholder="Indique su dirección principal"
+                  placeholder="Ingrese su dirección"
                   value={adress}
                   onChange={onInputChange}
                 />
               </div>
               <div className="row mt-3">
                 <div className="form-group col-md-4">
-                  <label htmlFor="city">City</label>
+                  <label htmlFor="city">Ciudad </label>
                   <input
                     type="text"
                     className="form-control"
                     name="city"
                     value={city}
+                    placeholder="Ingrese su Ciudad"
                     onChange={onInputChange}
                   />
                 </div>
                 <div className="form-group col-md-4">
-                  <label htmlFor="status">Condición del Usuário</label>
+                  <label htmlFor="status">Condición del Usuario</label>
                   <select
                     name="status"
                     className="form-control"
                     value={status}
                     onChange={onInputChange}
                   >
-                    <option>Selecciomne opción...</option>
+                    <option>Seleccione</option>
                     {estatus.map((item) => {
                       return (
                         <option key={item.id} value={item.descrip}>
@@ -277,12 +278,13 @@ export default function User({ user, edit, riviewList }) {
                   </select>
                 </div>
                 <div className="form-group col-md-4">
-                  <label htmlFor="numTelefono">Num. Celular</label>
+                  <label htmlFor="numTelefono">Celular </label>
                   <input
                     type="text"
                     className="form-control"
                     name="numTelefono"
                     value={numTelefono}
+                    placeholder="Ingrese celular"
                     onChange={onInputChange}
                   />
                 </div>
