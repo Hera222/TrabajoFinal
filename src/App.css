@@ -37,6 +37,7 @@ label {
   font-weight: 700;
   font-style: italic;
 }
+/*
 header {
   display: flex;
   flex-direction: column;
@@ -47,8 +48,8 @@ header {
   color: #E0E1DD;
   height: 180px;
 
-  background: url(../src/assets/title2.jpg);  /*se agrega la imagen al header*/
-}
+  background: url(../src/assets/title2.jpg);  /*se agrega la imagen al header
+}*/
 main{
   width: 100%;
 }

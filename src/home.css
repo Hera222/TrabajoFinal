@@ -13,16 +13,19 @@ section {
   display: flex;
   margin-bottom: 50px;
 }
-/*
+
 header {
   width: 100vw;
   background-image: url(../src/assets/title2.jpg);
-  /* background-repeat: no-repeat; 
-  color: white;
+  /* background-repeat: no-repeat; */
+  color: #E0E1DD;
   font-size: 1.1em;
   height: 180px;
   font-weight: bold;
-}*/
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 
 .main {
