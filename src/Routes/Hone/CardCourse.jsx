@@ -1,7 +1,7 @@
 import React from "react";
 import android from "../../assets/android_app.jpg";
 import graphic from "../../assets/graphic_desing.jpg";
-import basic from "../../assets/back.webp";
+import back from "../../assets/back.webp";
 import web from "../../assets/web_app.jpg";
 import { FaRegStar } from "react-icons/fa";
 
