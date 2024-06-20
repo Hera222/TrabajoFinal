@@ -203,6 +203,7 @@ footer h3{
   .prinSection {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
   }
 
 .ubicacion, .ubicanos, .abour {
