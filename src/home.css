@@ -13,15 +13,17 @@ section {
   display: flex;
   margin-bottom: 50px;
 }
+/*
 header {
   width: 100vw;
   background-image: url(../src/assets/title2.jpg);
-  /* background-repeat: no-repeat; */
+  /* background-repeat: no-repeat; 
   color: white;
   font-size: 1.1em;
   height: 180px;
   font-weight: bold;
-}
+}*/
+
 
 .main {
   display: flex;
