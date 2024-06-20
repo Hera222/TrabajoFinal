@@ -14,13 +14,9 @@ const Home = () => {
       <div className="container">
         <MainSection />
         <CardCourse />
-        <h2 className="mt-5">Enlístate Con Nosotros</h2>
+        <h2 className="mt-5">¡Puede registrarse en nuestros cursos!</h2>
         <hr />
-        <p>
-          Envíanos un mensaje y te atenderemos a la brevedad posible. Registrate
-          en el siguientes <Link to={"/register"}>link</Link> y forma parte de
-          nuestra institución y nuestro selecto grupos de estudiantes.
-        </p>
+        <p>Regístrese <Link to={"/register"}>link</Link>  y sea parte de nuestro selecto grupo de estudiantes, o también puede contactarnos: </p><br></br><br></br><br></br>
         <Contact />
       </div>
     </>

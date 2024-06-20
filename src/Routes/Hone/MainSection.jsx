@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/vertical-market-software.webp";
+import img from "../../assets/wall_paper9";
 import { useUsersContext } from "../../hooks/UsersContext";
 
 function MainSection() {
@@ -17,29 +17,12 @@ function MainSection() {
           <hr />
           <section className="prinSetion">
             <aside>
-              <p>
-                Nos complace ofrecer una amplia gama de{" "}
-                <b>cursos de informática</b>
-                diseñados para satisfacer sus necesidades de aprendizaje, sin
-                importar su nivel de experiencia. En nuestro instituto,
-                encontrará un equipo dedicado de instructores expertos
-                apasionados por la enseñanza y listos para ayudarlo a tener
-                éxito.
-              </p>
-              <p>
-                Nuestra misión es brindarle las habilidades y conocimientos que
-                necesita para tener éxito en la era digital actual. Creemos que
-                todos deberían tener acceso a una educación de calidad, por eso
-                nos esforzamos por brindar opciones de aprendizaje asequibles y
-                flexibles. Nuestros cursos están diseñados para ser prácticos y
-                prácticos, brindándole la oportunidad de aplicar lo que aprende
-                en entornos del mundo real.
-              </p>
-              <p>
-                <b>Únase al mejor instituto de IT</b> y emprenda un viaje de
-                crecimiento y éxito con nosotros.
-              </p>
-              <h1>Formando Grandes Profesionales</h1>
+            <p>Nos complace ofrecer una amplia gama de cursos de informática diseñados para satisfacer sus necesidades de aprendizaje sin importar su nivel de experiencia.</p>
+              <p>En nuestra academia, encontrará un equipo dedicado de instructores expertos apasionados por la enseñanza y listos para ayudarlo a tener éxito.</p>
+              <p>Nuestra Misión es brindarle las habilidades y los conocimientos que necesita para tener éxito en la era digital actual, creemos que todos deberían tener acceso a una educación de calidad, por eso nos esforzamos por brindar opciones de aprendizaje asequibles y flexibles.</p>
+              <p>Nuestros cursos están diseñados para ser prácticos, brindándole la oportunidad de aplicar lo que aprende en entornos del mundo real.</p>
+              <p>Únase a la mejor academia de IT y emprenda un viaje de crecimiento y éxito profesional junto a nosotros.</p><br></br>
+              <h3>¡Formando Profesionales!</h3>
             </aside>
             <aside>
               <img src={img} alt="" />
