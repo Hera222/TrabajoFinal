@@ -35,20 +35,20 @@ function Menu() {
       subItems: [],
     },
     {
-      title: "Estudiante",
+      title: "Estudiantes",
       subItems: [
         { title: "Registro", route: "/register" },
-        { title: "Perfíl", route: "/perfil" },
+        { title: "Perfil", route: "/perfil" },
       ],
     },
     {
       title: "Administración",
       subItems: [
         { title: "Gestión de Cursos", route: "/cursos" },
-        { title: "Gestión de Estudiante", route: "/students" },
-        { title: "Gestión de Proferores", route: "/teachers" },
+        { title: "Gestión de Estudiantes", route: "/students" },
+        { title: "Gestión de Profesores", route: "/teachers" },
         { title: "Matriculación de Cursos", route: "/matricula" },
-        { title: "Usuários", route: "/users" },
+        { title: "Usuarios", route: "/users" },
         { title: "Contactos", route: "/contact" },
       ],
     },
@@ -62,7 +62,7 @@ function Menu() {
     {
       title: "Accesos",
       subItems: [
-        { title: "Inicio Sesión", route: "/login" },
+        { title: "Iniciar Sesión", route: "/login" },
         { title: "Cambio de Clave", route: "/cambioClave" },
         { title: "Salir", route: "/Logout" },
       ],

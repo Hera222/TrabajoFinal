@@ -10,10 +10,7 @@ const AcademApp = () => {
   return (
     <Router>
       <header>
-        <h2>Conviértete en la próxima estella FULL STACK</h2>
-        <h2>
-          estudianto en <b> IT ACADEMY</b>
-        </h2>
+        <h2>CONVIÉRTASE EN UN DESARROLLADOR FULLSTACK</h2>
       </header>
       <main className="main">
         <div className="aside">
