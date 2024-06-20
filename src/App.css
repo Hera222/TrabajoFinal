@@ -254,6 +254,9 @@ section{
   background-color: #1B263B;
   border-color: #1B263B;
 }
+.btn-success :hover{
+  background-color: #778DA9;
+}
 @media (max-width: 850px) {
   nav div{
     display: flex;

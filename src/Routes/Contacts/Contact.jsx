@@ -133,7 +133,7 @@ export default function Contact({ contact, edit, riviewList }) {
                     type="text"
                     className="form-control"
                     name="nombre"
-                    placeholder="Ingrese Nombres Completo"
+                    placeholder="Ingrese Nombre Completo"
                     value={nombre}
                     onChange={onInputChange}
                   />
@@ -142,12 +142,12 @@ export default function Contact({ contact, edit, riviewList }) {
                   )}{" "}
                 </div>
                 <div className="form-group col-md-6">
-                  <label htmlFor="email">Correo Electrónico</label>
+                  <label htmlFor="email">Email </label>
                   <input
                     type="email"
                     className="form-control"
                     name="email"
-                    placeholder="Ingrese el Coreo Electónico"
+                    placeholder="Ingrese Email"
                     value={email}
                     onChange={onInputChange}
                   />
@@ -163,7 +163,7 @@ export default function Contact({ contact, edit, riviewList }) {
                     type="text"
                     className="form-control"
                     name="celular"
-                    placeholder="Ingrese Número Telefónico Celular"
+                    placeholder="Ingrese Número de Celular"
                     value={celular}
                     onChange={onInputChange}
                   />
@@ -172,12 +172,13 @@ export default function Contact({ contact, edit, riviewList }) {
                   )}{" "}
                 </div>
                 <div className="form-group col-md-6">
-                  <label htmlFor="city">City</label>
+                  <label htmlFor="city">Ciudad </label>
                   <input
                     type="text"
                     className="form-control"
                     name="city"
                     value={city}
+                    placeholder="Ingrese Ciudad"
                     onChange={onInputChange}
                   />
                 </div>
@@ -185,7 +186,7 @@ export default function Contact({ contact, edit, riviewList }) {
 
               <div className="row  mt-3">
                 <div className="form-group col-md-12">
-                  <label htmlFor="curso"> Nuestro Curso Disponibles </label>
+                  <label htmlFor="curso">Cursos Disponibles </label>
                   <select
                     name="curso"
                     className="form-control"
@@ -204,7 +205,7 @@ export default function Contact({ contact, edit, riviewList }) {
               </div>
 
               <div className="row mt-3">
-                <label htmlFor="message">Deje sus Comentarios</label>
+                <label htmlFor="message">Comentarios </label>
                 <textarea
                   // type="textarea"
                   className="form-control"
