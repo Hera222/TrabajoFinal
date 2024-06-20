@@ -15,7 +15,7 @@ section {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   background: url(../src/assets/title2.jpg);
   /* background-repeat: no-repeat; */
   color: #E0E1DD;
