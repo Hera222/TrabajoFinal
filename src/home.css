@@ -102,9 +102,12 @@ p{
   justify-content: space-between;
   text-align: center;
   width: 100%;
+  padding: 10px;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   border-radius: 8px;
   width: 24%;
   text-align: center;
@@ -193,6 +196,10 @@ footer h3{
   text-align: center;
   padding: 2%;
   } 
+  .prinSection {
+    display: flex;
+    flex-direction: column;
+  }
 
 .ubicacion, .ubicanos, .abour {
   font-size: smaller;
