@@ -103,7 +103,6 @@ export default function Contact({ contact, edit, riviewList }) {
   const getCourses = async () => {
     const url = `${hostServer}/api/courses`;
 
-    // let url = "http://localhost:5000/api/";
     let response = await fetch(url);
     let responseCurso = await response.json();
     if (responseCurso) {
@@ -133,7 +132,7 @@ export default function Contact({ contact, edit, riviewList }) {
                     type="text"
                     className="form-control"
                     name="nombre"
-                    placeholder="Ingrese Nombre Completo"
+                    placeholder="Nombre Completo"
                     value={nombre}
                     onChange={onInputChange}
                   />
@@ -147,7 +146,7 @@ export default function Contact({ contact, edit, riviewList }) {
                     type="email"
                     className="form-control"
                     name="email"
-                    placeholder="Ingrese Email"
+                    placeholder="Email"
                     value={email}
                     onChange={onInputChange}
                   />
@@ -163,7 +162,7 @@ export default function Contact({ contact, edit, riviewList }) {
                     type="text"
                     className="form-control"
                     name="celular"
-                    placeholder="Ingrese Número de Celular"
+                    placeholder="Celular"
                     value={celular}
                     onChange={onInputChange}
                   />
@@ -178,7 +177,7 @@ export default function Contact({ contact, edit, riviewList }) {
                     className="form-control"
                     name="city"
                     value={city}
-                    placeholder="Ingrese Ciudad"
+                    placeholder="Ciudad"
                     onChange={onInputChange}
                   />
                 </div>
@@ -193,7 +192,7 @@ export default function Contact({ contact, edit, riviewList }) {
                     value={curso}
                     onChange={onInputChange}
                   >
-                    <option>Seleccione un curso</option>
+                    <option>Seleccione </option>
                     {courses.map((item) => (
                       <option
                         key={item.id}

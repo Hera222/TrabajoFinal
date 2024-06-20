@@ -19,6 +19,9 @@ section {
   flex-direction: row;
   width: 100%;
 }
+p{
+  text-align: center;
+}
 /*
 .aside {
   width: 20%;
@@ -97,12 +100,14 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: center;
   width: 100%;
 }
 
 .card {
   border-radius: 8px;
   width: 24%;
+  text-align: center;
   box-shadow: 4px 3px 3px 2px rgb(212, 208, 208);
 }
 
@@ -174,10 +179,25 @@ footer h3{
     display: flex;
     flex-direction: column;
   }
-
-  .courseSection > aside {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
     width: 100%;
+    padding: 10px;
   }
+  .card {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+  } 
+
+.ubicacion, .ubicanos, .abour {
+  font-size: smaller;
+}
+
 }
 
 .upload {
