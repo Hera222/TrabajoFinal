@@ -82,6 +82,9 @@ nav a{
   width: 100%;
 }
 
+#imgMain{
+  display: flex;
+}
 section{
   width: 100%;
   display: flex;
