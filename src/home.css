@@ -20,11 +20,8 @@ header {
   /* background-repeat: no-repeat; */
   color: #E0E1DD;
   font-size: 1.1em;
-  height: 180px;
+  height: 230px;
   font-weight: bold;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 
@@ -33,12 +30,11 @@ header {
   flex-direction: row;
   /* height: 100vw; */
 }
-
+/*
 .aside {
   width: 20%;
-  background-color: rgb(69, 73, 76);
   height: 100wh;
-}
+}*/
 
 .section {
   width: 85%;
@@ -62,7 +58,7 @@ header {
 
 .detail-camp {
   font-size: 1em;
-  color: rgb(88, 88, 87);
+  color: #415A77;
 }
 
 .courseVerSection {
@@ -76,7 +72,7 @@ header {
 }
 .form-marco {
   margin: 0em 7em 3em 7em;
-  border: 1px solid black;
+  border: 1px solid #1B263B;
   border-radius: 10px;
   margin-top: 25px;
 }
@@ -87,12 +83,12 @@ header {
 }
 
 .form-titulo {
-  background-color: black;
+  background-color: #1B263B;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: left;
-  color: white;
+  color: #E0E1DD;
   border-radius: 10px 10px 0 0;
   font-size: 2rem;
   padding-left: 2.5rem;
@@ -141,7 +137,7 @@ header {
   width: 170px;
   height: 45px;
   border-radius: 100px;
-  background-color: rgb(149, 59, 205);
+  background-color: #415A77;
   margin: 20px 0 0 0;
 }
 
@@ -152,15 +148,15 @@ header {
   display: flex;
   align-items: start;
   justify-content: space-around;
-  background-color: rgb(42, 41, 41);
-  color: rgb(227, 227, 227);
+  background-color: #1B263B;
+  color: #E0E1DD;
   margin-top: 120px;
   margin-bottom: 0;
 }
 
 .linea,
 .icon-color {
-  color: rgb(22, 163, 251);
+  color: #415A77;
 }
 .ubicacion,
 .ubicanos,
@@ -178,7 +174,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: black;
-  color: white;
+  color:#E0E1DD;
   padding: 20px 0;
   margin-bottom: 0;
 }
@@ -200,8 +196,8 @@ header {
   justify-content: start;
   padding: 5px 20px;
   border-radius: 5px;
-  background-color: rgb(73, 72, 72);
-  color: white;
+  background-color: #415A77;
+  color: #E0E1DD;
   font-size: 1.05em;
   /* margin-left: 2px; */
   /* border border-gray-300 rounded-md shadow5-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50" */
@@ -223,10 +219,10 @@ header {
 }
 
 .teacherGrup {
-  color: white;
+  color: #E0E1DD;
   padding: 8px 20px;
   border-radius: 4px;
-  background-color: rgb(77, 78, 79);
+  background-color: #415A77;
   font-size: large;
   width: 96%;
   margin-left: 2%;
