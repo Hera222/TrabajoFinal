@@ -98,14 +98,13 @@ p{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  text-align: center;
   width: 100%;
   padding: 10px;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
   border-radius: 8px;
   width: 24%;
   text-align: center;
@@ -119,6 +118,7 @@ p{
   margin: 0 100px;
   padding: 30px 40px;
   border-radius: 6px;
+  width: 450px;
   box-shadow: 2px 3px 5px 5px rgb(212, 208, 208);
 }
 
