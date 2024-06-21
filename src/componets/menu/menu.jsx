@@ -42,7 +42,7 @@ function Menu() {
       ],
     },
     {
-      title: "Administración - Acceso con Login ==>",
+      title: "Administración",
       subItems: [
         { title: "Gestión de Cursos", route: "/cursos" },
         { title: "Gestión de Estudiantes", route: "/students" },
