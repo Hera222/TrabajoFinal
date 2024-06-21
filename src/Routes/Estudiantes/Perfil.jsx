@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { useForm } from "../../hooks/useForm";
-
 import Swal from "sweetalert2";
 import { useAppContext } from "../../hooks/appContext";
 import ValidateErrors from "../../componets/services/ValidateErrors";
@@ -273,7 +272,7 @@ export default function Perfil({ title }) {
                         value={condicion}
                         onChange={onInputChange}
                       >
-                        <option>Seleccionar</option>
+                        <option>Seleccionar </option>
                         <option>Activo</option>
                         <option>No Activo</option>
                       </select>
