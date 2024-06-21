@@ -123,7 +123,7 @@ export default function Contact({ contact, edit, riviewList }) {
       ) : (
         <>
           <div className="container px-5  ">
-            <h3>Contacto</h3>
+            <h2>Contacto</h2>
             <form onSubmit={handleSubmit} className="contact">
               <div className="row mt-4">
                 <div className="form-group col-md-6">

@@ -115,8 +115,8 @@ export default function Student({ title }) {
   return (
     <>
       {
-        // isLoading ? (
-        // <h3>Cargando...</h3>
+         //isLoading ? (
+         //<h3>Cargando...</h3>
         // ) :
         error ? (
           errorMessage()
