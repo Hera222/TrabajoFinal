@@ -1,13 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { useForm } from "../../hooks/useForm";
-
 import Swal from "sweetalert2";
 import { useAppContext } from "../../hooks/appContext";
 import ValidateErrors from "../../componets/services/ValidateErrors";
 import validationSchema from "../../componets/services/validationSchema";
+import AccessProfile from "../../componets/services/AccessProfil";
 
 export default function Teacher({ teacher, edit, riviewList }) {
+  AccessProfile("isAdmin");
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const api = `${hostServer}/api/v3/teacher`;
   const { HandleNivelClose } = useAppContext();

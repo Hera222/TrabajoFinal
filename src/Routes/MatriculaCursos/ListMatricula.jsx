@@ -3,7 +3,6 @@ import openModal from "../../componets/modal/OpenModal";
 import Pagination from "../../componets/services/Pagination ";
 import Matricula from "./Matricula";
 import Buscador from "../../componets/Buscador";
-
 import Swal from "sweetalert2";
 import { useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
@@ -11,8 +10,10 @@ import { FaTrashAlt } from "react-icons/fa";
 import { TbEdit } from "react-icons/tb";
 import { IoMdAdd } from "react-icons/io";
 import { useAppContext } from "../../hooks/appContext";
+import AccessProfile from "../../componets/services/AccessProfil";
 
 export default function ListMatricula({ title }) {
+  AccessProfile("isAdmin");
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const { HandleNivelClose } = useAppContext();
   const url = `${hostServer}/api/v3/matriculas`;

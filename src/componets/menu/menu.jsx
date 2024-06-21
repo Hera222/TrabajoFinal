@@ -42,6 +42,13 @@ function Menu() {
       ],
     },
     {
+      title: "Listados",
+      subItems: [
+        { title: "Cursos", route: "/vecurso" },
+        { title: "Estudiantes por Curso", route: "/matricula" },
+      ],
+    },
+    {
       title: "Administración",
       subItems: [
         { title: "Gestión de Cursos", route: "/cursos" },
@@ -50,13 +57,6 @@ function Menu() {
         { title: "Matriculación de Cursos", route: "/matricula" },
         { title: "Usuarios", route: "/users" },
         { title: "Contactos", route: "/contact" },
-      ],
-    },
-    {
-      title: "Listados",
-      subItems: [
-        { title: "Cursos", route: "/vecurso" },
-        { title: "Estudiantes por Curso", route: "/matricula" },
       ],
     },
     {

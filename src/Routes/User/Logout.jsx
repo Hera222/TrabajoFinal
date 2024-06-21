@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUsersContext } from '../../hooks/UsersContext';
-
 import Swal from 'sweetalert2';
-
 import { useFetch } from '../../hooks/useFetch';
 
 function Logout() {

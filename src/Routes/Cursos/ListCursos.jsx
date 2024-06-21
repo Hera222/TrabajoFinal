@@ -4,7 +4,6 @@ import Pagination from "../../componets/services/Pagination ";
 import Curso from "./Curso";
 import VerCurso from "./VerCurso";
 import Buscador from "../../componets/Buscador";
-
 import Swal from "sweetalert2";
 import { useState } from "react";
 import { useFetch } from "../../hooks/useFetch";

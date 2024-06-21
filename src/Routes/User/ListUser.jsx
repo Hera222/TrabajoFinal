@@ -6,15 +6,14 @@ import AccessProfil from "../../componets/services/AccessProfil";
 import { useFetch } from "../../hooks/useFetch";
 import User from "./User";
 import { useUsersContext } from "../../hooks/UsersContext";
-
 import Swal from "sweetalert2";
 import { FaTrashAlt } from "react-icons/fa";
 import { TbEdit } from "react-icons/tb";
 import { IoMdAdd } from "react-icons/io";
+import AccessProfile from "../../componets/services/AccessProfil";
 
 export default function ListUser({ title }) {
-  // const { setUsersContext } = useUsersContext();
-  AccessProfil();
+  AccessProfile("isAdmin");
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const api = `${hostServer}/api/v3/users`;
   const ref = useRef(null);

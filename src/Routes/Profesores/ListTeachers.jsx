@@ -10,9 +10,10 @@ import { useFetch } from "../../hooks/useFetch";
 import { FaTrashAlt } from "react-icons/fa";
 import { TbEdit } from "react-icons/tb";
 import { IoMdAdd } from "react-icons/io";
-// import "./teacher.css";
+import AccessProfile from "../../componets/services/AccessProfil";
 
 export default function ListTeacher({ title }) {
+  AccessProfile("isAdmin");
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const url = `${hostServer}/api/v3/teachers`;
   const [selectProfs, setSelectedProfs] = useState([]);
