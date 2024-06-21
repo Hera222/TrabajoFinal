@@ -265,12 +265,12 @@ export default function Curso({ curso, edit, riviewList }) {
                   </div>
                   <div className="row mt-2">
                     <div className="form-group col-md-12">
-                      <label htmlFor="nombre">Nombres </label>
+                      <label htmlFor="nombre">Nombre del Curso </label>
                       <input
                         type="text"
                         className="form-control"
                         name="nombre"
-                        placeholder="Ingrese Nombres"
+                        placeholder="Ingrese Nombre del curso"
                         value={nombre}
                         onChange={onInputChange}
                       />
@@ -286,7 +286,7 @@ export default function Curso({ curso, edit, riviewList }) {
                         type="costo"
                         className="form-control"
                         name="costo"
-                        placeholder="Ingrese el costo del curso..."
+                        placeholder="Ingrese el costo"
                         value={costo}
                         onChange={onInputChange}
                       />
@@ -297,16 +297,16 @@ export default function Curso({ curso, edit, riviewList }) {
                   </div>
                   <div className="row mt-2">
                     <div className="form-group col-md-12">
-                      <label htmlFor="condicion">Estátus</label>
+                      <label htmlFor="condicion">Estatus</label>
                       <select
                         name="condicion"
                         className="form-control"
                         value={condicion}
                         onChange={onInputChange}
                       >
-                        <option>Seleccióne opción</option>
-                        <option>Actívo</option>
-                        <option>No Actívo</option>
+                        <option>Seleccionar</option>
+                        <option>Activo</option>
+                        <option>No Activo</option>
                       </select>
                     </div>
                   </div>
@@ -317,7 +317,7 @@ export default function Curso({ curso, edit, riviewList }) {
                         type="duracion"
                         className="form-control"
                         name="duracion"
-                        placeholder="Ingrese la duración del curso,,"
+                        placeholder="Ingrese la duración"
                         value={duracion}
                         onChange={onInputChange}
                       />
@@ -329,13 +329,13 @@ export default function Curso({ curso, edit, riviewList }) {
                   <div className="row mt-2">
                     <div className="form-group col-md-12">
                       <label htmlFor="clasificacion">
-                        Clasificación del curso
+                        Clasificación del curso 
                       </label>
                       <input
                         type="clasificacion"
                         className="form-control"
                         name="clasificacion"
-                        placeholder="Indique la Clasificacion del curso,,"
+                        placeholder="Ingrese la Clasificacion"
                         value={clasificacion}
                         onChange={onInputChange}
                       />
@@ -352,7 +352,7 @@ export default function Curso({ curso, edit, riviewList }) {
                       Asignación de Profesores{" "}
                     </label>
                     {profesores.map((profesor) => (
-                      <div key={profesor.id} className="form-group col-md-6">
+                      <div key={profesor._id} className="form-group col-md-6">
                         <label
                           htmlFor={`nombre-${profesor.id}`}
                           className=" mt-2"
@@ -374,7 +374,7 @@ export default function Curso({ curso, edit, riviewList }) {
                           <option></option>
                           {teachers.map((item) => (
                             <option
-                              key={item.id}
+                              key={item._id}
                             >{`${item.nombre} ${item.apellido}`}</option>
                           ))}
                         </select>
@@ -461,7 +461,7 @@ export default function Curso({ curso, edit, riviewList }) {
 
               <div className="btn-submit">
                 {edit ? (
-                  <button type="submit" className="btn btn-primary w-100">
+                  <button type="submit" className="btn btn-success w-100">
                     Actualizar
                   </button>
                 ) : (

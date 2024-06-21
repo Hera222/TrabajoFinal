@@ -10,7 +10,7 @@ import validationSchema from "../../componets/services/validationSchema";
 export default function Contact({ contact, edit, riviewList }) {
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const { HandleNivelClose } = useAppContext();
-  const url = `${hostServer}/api/contact`;
+  const api = `${hostServer}/api/v3/contact`;
   const [error, setError] = useState(false);
   const [courses, setCourses] = useState([]);
   const initialForm = {
@@ -101,7 +101,7 @@ export default function Contact({ contact, edit, riviewList }) {
   }, [data]);
 
   const getCourses = async () => {
-    const url = `${hostServer}/api/courses`;
+    const url = `${hostServer}/api/v3/courses`;
 
     let response = await fetch(url);
     let responseCurso = await response.json();

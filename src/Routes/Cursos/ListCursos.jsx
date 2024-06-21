@@ -27,7 +27,7 @@ export default function ListCurso({ title, accion }) {
     { id: 2, nombre: "nombre", descrip: "Nombre" },
   ];
   function handleAddCursos() {
-    const tittle = "Adición de Cursos";
+    const tittle = "Agregar Cursos";
     openModal(
       <Curso curso={""} edit={false} riviewList={updateList} />,
       null,
@@ -39,7 +39,7 @@ export default function ListCurso({ title, accion }) {
   }
 
   function handleEdit(curso) {
-    const tittle = "Edición de Cursos";
+    const tittle = "Editar Cursos";
     openModal(
       <Curso curso={curso} edit={true} riviewList={updateList} />,
       null,
@@ -51,7 +51,7 @@ export default function ListCurso({ title, accion }) {
   }
 
   function handleVer(curso) {
-    const tittle = "Consulta de Cursos";
+    const tittle = "Consultar Cursos";
     openModal(
       <VerCurso curso={curso} />,
       null,
@@ -71,8 +71,8 @@ export default function ListCurso({ title, accion }) {
 
     const delId = id;
     Swal.fire({
-      title: "Está Seguro?",
-      text: "Desea eliminar este regístro?",
+      title: "¿Está Seguro?",
+      text: "¿Desea eliminar?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -84,7 +84,7 @@ export default function ListCurso({ title, accion }) {
           await deleteData(url, delId);
           await Swal.fire({
             title: "Eliminádo!",
-            text: "El Curso fué eliminádo.",
+            text: "Curso eliminado",
             icon: "success",
           });
           getCursos();
@@ -177,7 +177,7 @@ export default function ListCurso({ title, accion }) {
                             <td>
                               <FaTrashAlt
                                 style={{ fontSize: "25px" }}
-                                onClick={() => handleDel(curso._id)}
+                                onClick={() => handleDel(curso.id)}
                               />
                             </td>
                           </tr>

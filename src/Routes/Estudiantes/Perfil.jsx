@@ -76,7 +76,7 @@ export default function Perfil({ title }) {
   };
 
   const getStudent = async (event) => {
-    let url = `${hostServer}/api/studentdni/${event.target.value}`;
+    let url = `${hostServer}/api/v3/studentdni/${event.target.value}`;
     const responseData = await getData(url);
     if (async () => await responseData) {
       setStudent(responseData?.data.data);

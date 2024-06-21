@@ -16,7 +16,7 @@ import { FaRegEye } from "react-icons/fa";
 export default function ListContacts({ title, accion }) {
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const { HandleNivelClose } = useAppContext();
-  const url = `${hostServer}/api/contacts`;
+  const url = `${hostServer}/api/v3/contacts`;
   const [selectedItems, setSelectedItems] = useState([]);
   const [page, setPage] = useState(1);
   const [itemsPage, setItemsPage] = useState(8);
@@ -24,11 +24,11 @@ export default function ListContacts({ title, accion }) {
   const bgChange = true;
   const modalNivel = 2;
   const filters = [
-    { id: 1, nombre: "email", descrip: "Emáil" },
+    { id: 1, nombre: "email", descrip: "Email" },
     { id: 2, nombre: "nombre", descrip: "Nombre" },
   ];
   function handleAddContacts() {
-    const tittle = "Adición de Contacts";
+    const tittle = "Agregar Contactos";
     openModal(
       <Contact contact={""} edit={false} riviewList={updateList} />,
       null,
@@ -68,7 +68,7 @@ export default function ListContacts({ title, accion }) {
   };
 
   const handleDel = async (id) => {
-    const url = `${hostServer}/api/contact`;
+    const url = `${hostServer}/api/v3/contact`;
 
     const delId = id;
     Swal.fire({
