@@ -5,10 +5,10 @@ import { useAppContext } from "../../hooks/appContext";
 import Swal from "sweetalert2";
 import ValidateErrors from "../../componets/services/ValidateErrors";
 import validationSchema from "../../componets/services/validationSchema";
-import AccessProfil from "../../componets/services/AccessProfil";
+import AccessProfile from "../../componets/services/AccessProfil";
 
 export default function User({ user, edit, riviewList }) {
-  // AccessProfil("isAdmin");
+  AccessProfile("isAdmin");
   const { HandleNivelClose } = useAppContext();
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const api = `${hostServer}/api/v3/user`;

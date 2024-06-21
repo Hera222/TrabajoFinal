@@ -5,8 +5,10 @@ import Swal from "sweetalert2";
 import { useAppContext } from "../../hooks/appContext";
 import ValidateErrors from "../../componets/services/ValidateErrors";
 import validationSchema from "../../componets/services/validationSchema";
+import AccessProfile from "../../componets/services/AccessProfil";
 
 export default function Curso({ curso, edit, riviewList }) {
+  AccessProfile("isAdmin");
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const { HandleNivelClose } = useAppContext();
   const api = `${hostServer}/api/v3/course`;

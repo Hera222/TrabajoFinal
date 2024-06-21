@@ -12,8 +12,10 @@ import { FaTrashAlt } from "react-icons/fa";
 import { TbEdit } from "react-icons/tb";
 import { IoMdAdd } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa";
+import AccessProfile from "../../componets/services/AccessProfil";
 
 export default function ListContacts({ title, accion }) {
+  AccessProfile("isAdmin");
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const { HandleNivelClose } = useAppContext();
   const url = `${hostServer}/api/v3/contacts`;

@@ -1,40 +1,40 @@
 const validationSchema = {
   dni: [
     (value) =>
-      value.trim() === "" ? "El número de documento es requerido" : undefined,
+      value.trim() === "" ? "El DNI es requerido" : undefined,
     (value) =>
-      value.length <= 8 ? "El DNI debe tener almenos 8 caracteres" : undefined,
+      value.length <= 8 ? "El DNI debe tener al menos 8 caracteres" : undefined,
     (value) =>
       value.match("^[0-9]+$") === null ? "Solo se admiten números" : undefined,
   ],
-  // codigo: [
-  //   (value) =>
-  //     value.trim() === "" ? "El código del curso es requerido" : undefined,
-  // ],
+  codigo: [
+    (value) =>
+      value.trim() === "" ? "El código del curso es requerido" : undefined,
+   ],
   nombre: [
     (value) => (value.trim() === "" ? "El Nombre es requerido" : undefined),
     (value) =>
-      value.length < 3 ? "Nombre debe tener almenos 3 caracteres" : undefined,
+      value.length < 3 ? "El Nombre debe tener almenos 3 caracteres" : undefined,
   ],
   apellido: [
-    (value) => (value.trim() === "" ? "El Apellid es requerido" : undefined),
+    (value) => (value.trim() === "" ? "El Apellido es requerido" : undefined),
     (value) =>
       value.length < 3
-        ? "Apellidos deben tener al menos 3 caracteres"
+        ? "El Apellido deben tener al menos 3 caracteres"
         : undefined,
   ],
   email: [
     (value) => (value.trim() === "" ? "El Email es requerido" : undefined),
     (value) =>
-      !/^\S+@\S+\.\S+$/.test(value) ? "Email no es válido" : undefined,
+      !/^\S+@\S+\.\S+$/.test(value) ? "El Email no es válido" : undefined,
   ],
   password: [
-    (value) => (value === "" ? "La contraseña es requerido" : undefined),
+    (value) => (value === "" ? "La contraseña es requerida" : undefined),
   ],
   descripcion: [
     (value) =>
       value.trim() === ""
-        ? "La descripción ampliada del curso es requerido"
+        ? "La descripción ampliada del curso es requerida"
         : undefined,
   ],
   celular: [
