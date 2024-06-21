@@ -40,7 +40,7 @@ export default function ListContacts({ title, accion }) {
   }
 
   function handleEdit(contact) {
-    const tittle = "Edición de Contacts";
+    const tittle = "Editar Contactos";
     openModal(
       <Contact contact={contact} edit={true} riviewList={updateList} />,
       null,
@@ -72,8 +72,8 @@ export default function ListContacts({ title, accion }) {
 
     const delId = id;
     Swal.fire({
-      title: "Está Seguro?",
-      text: "Desea eliminar este regístro?",
+      title: "¿Está Seguro?",
+      text: "¿Desea eliminar?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -86,7 +86,7 @@ export default function ListContacts({ title, accion }) {
           getContacts();
           await Swal.fire({
             title: "Eliminádo!",
-            text: "El Contact fué eliminádo.",
+            text: "Contacto eliminado.",
             icon: "success",
           });
         };
@@ -164,7 +164,7 @@ export default function ListContacts({ title, accion }) {
                     selectedItems.map((contact) => {
                       if (accion !== "ver") {
                         return (
-                          <tr key={contact.id}>
+                          <tr key={contact._id}>
                             <td>{contact.id}</td>
                             <td>{contact.email}</td>
                             <td>{`${contact.nombre}`} </td>
@@ -178,14 +178,14 @@ export default function ListContacts({ title, accion }) {
                             <td>
                               <FaTrashAlt
                                 style={{ fontSize: "25px" }}
-                                onClick={() => handleDel(contact.id)}
+                                onClick={() => handleDel(contact._id)}
                               />
                             </td>
                           </tr>
                         );
                       } else {
                         return (
-                          <tr key={contact.id}>
+                          <tr key={contact._id}>
                             <td>{contact.id}</td>
                             <td>{contact.email}</td>
                             <td>{`${contact.nombre}`} </td>

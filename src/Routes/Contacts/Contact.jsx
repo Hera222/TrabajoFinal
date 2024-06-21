@@ -14,7 +14,7 @@ export default function Contact({ contact, edit, riviewList }) {
   const [error, setError] = useState(false);
   const [courses, setCourses] = useState([]);
   const initialForm = {
-    id: contact ? contact.id : "",
+    id: contact ? contact._id : "",
     nombre: contact ? contact.nombre : "",
     email: contact ? contact.email : "",
     celular: contact ? contact.celular : "",
@@ -46,13 +46,13 @@ export default function Contact({ contact, edit, riviewList }) {
       if (!edit) {
         await createData(url, formData);
       } else {
-        await updateData(url, contact.id, formData);
+        await updateData(url, contact._id, formData);
       }
     } else {
       Swal.fire({
         position: "top",
         icon: "info",
-        title: "Debes corregir la información para poder registrarla",
+        title: "Debe corregir la información para poder registrarla",
         showConfirmButton: false,
         timer: 5000,
       });
@@ -195,7 +195,7 @@ export default function Contact({ contact, edit, riviewList }) {
                     <option>Seleccione </option>
                     {courses.map((item) => (
                       <option
-                        key={item.id}
+                        key={item._id}
                         value={item.nombre}
                       >{`${item.nombre}`}</option>
                     ))}
@@ -218,7 +218,7 @@ export default function Contact({ contact, edit, riviewList }) {
 
               <div className="btn-submit  mt-3">
                 {edit ? (
-                  <button type="submit" className="btn btn-primary w-100">
+                  <button type="submit" className="btn btn-success w-100">
                     Actualizar
                   </button>
                 ) : (
