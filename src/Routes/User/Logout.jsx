@@ -12,10 +12,10 @@ function Logout() {
 
 	let { data, isLoading = false, getData } = useFetch(null);
 
-	const salir = async () => {		
+	const salir = async () => {
 		setUsersContext([]);
 		navigate('/');
-		window.location.reload(true);
+		window.location.reload(true);	
 	};
 
 	useEffect(() => {
