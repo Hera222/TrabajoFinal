@@ -14,7 +14,7 @@ export default function Student({ title }) {
   const api = `${hostServer}/api/v3/student`;
   const [error, setError] = useState(false);
   const initialForm = {
-    id: student ? student._id : "",
+    id: student ? student._id : null,
     dni: student ? student.dni : "",
     nombre: student ? student.nombre : "",
     apellido: student ? student.apellido : "",
