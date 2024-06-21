@@ -8,7 +8,6 @@ export const useFetch = (url) => {
     setIsloading(true);
     try {
       let options = null;
-      // if (!formData?.imageCourse) {
       options = {
         method: method,
         credentials: "same-origin",
@@ -21,17 +20,8 @@ export const useFetch = (url) => {
         headers: { "Content-Type": "application/json" },
         body: formData ? JSON.stringify(formData) : null,
       };
-      // } else {
-      //   options = {
-      //     method: method,
-      //     body: formData,
-      //   };
-      // }
-      // console.log("valor de} envío...:", url, options);
       const response = await fetch(url, options);
-      // console.log("response....:", response);
       const responseData = await response.json();
-      // console.log("responseData....:", responseData);
       const result = {
         status: response.status,
         data: await responseData,
