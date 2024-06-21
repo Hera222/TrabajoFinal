@@ -7,7 +7,7 @@ import { useFetch } from '../../hooks/useFetch';
 function Logout() {
 	const navigate = useNavigate();
 	const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
-	const url = `${hostServer}/api/user/logout`;
+	const url = `${hostServer}/api/v3/user/logout`;
 	const { setUsersContext } = useUsersContext();
 
 	let { data, isLoading = false, getData } = useFetch(null);
@@ -38,7 +38,7 @@ function Logout() {
 
 	useEffect(() => {
 		salir();
-	}, ["/"]);
+	}, []);
 	return <div className="h-full" />;
 }
 
