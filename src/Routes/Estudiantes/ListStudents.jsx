@@ -9,8 +9,10 @@ import { useFetch } from "../../hooks/useFetch";
 import { FaTrashAlt } from "react-icons/fa";
 import { TbEdit } from "react-icons/tb";
 import { IoMdAdd } from "react-icons/io";
+import AccessProfile from "../../componets/services/AccessProfil";
 
 export default function ListStudent({ title }) {
+  AccessProfile("isAdmin");
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const { HandleNivelClose } = useAppContext();
   const url = `${hostServer}/idapi/v3/students`;
