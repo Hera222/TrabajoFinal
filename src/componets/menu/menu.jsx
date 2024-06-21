@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./menu.css"; // Archivo CSS donde definiremos los estilos
+import "./menu.css";
 
 function MenuItem({ item }) {
   const [isOpen, setIsOpen] = useState(false);
