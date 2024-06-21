@@ -14,7 +14,7 @@ export default function Student({ title }) {
   const api = `${hostServer}/api/v3/student`;
   const [error, setError] = useState(false);
   const initialForm = {
-    id: student ? student._id : null,
+    id: student ? student.id : "",
     dni: student ? student.dni : "",
     nombre: student ? student.nombre : "",
     apellido: student ? student.apellido : "",
@@ -22,6 +22,7 @@ export default function Student({ title }) {
     password: student ? student.pasword : "",
     confirmPassword: "",
     adress: student ? student.adress : "",
+    fechaNacimiento: student ? student.fechaNacimiento : new Date("2023/12/31"),
     city: student ? student.city : "",
     celular: student ? student.celular : "",
     condicion: student ? student.condicion : "",
@@ -39,6 +40,7 @@ export default function Student({ title }) {
     password,
     confirmPassword,
     celular,
+    fechaNacimiento,
     adress,
     city,
     condicion,
@@ -60,7 +62,7 @@ export default function Student({ title }) {
       if (!edit) {
         await createData(url, formData);
       } else {
-        await updateData(url, student._id, formData);
+        await updateData(url, student.id, formData);
       }
     } else {
       Swal.fire({
@@ -115,8 +117,8 @@ export default function Student({ title }) {
   return (
     <>
       {
-         //isLoading ? (
-         //<h3>Cargando...</h3>
+        // isLoading ? (
+        // <h3>Cargando...</h3>
         // ) :
         error ? (
           errorMessage()
@@ -134,7 +136,6 @@ export default function Student({ title }) {
                         className="form-control"
                         name="dni"
                         value={dni}
-                        placeholder="Ingrese DNI"
                         onChange={onInputChange}
                       />
                       {errorsInput.dni && (
@@ -158,7 +159,7 @@ export default function Student({ title }) {
                       )}{" "}
                     </div>
                     <div className="form-group col-md-6">
-                      <label htmlFor="inputName">Apellidos </label>
+                      <label htmlFor="inputName">Apelliodos </label>
                       <input
                         type="text"
                         className="form-control"
@@ -174,12 +175,12 @@ export default function Student({ title }) {
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="email">Email </label>
+                      <label htmlFor="email">Correo Electrónico</label>
                       <input
                         type="email"
                         className="form-control"
                         name="email"
-                        placeholder="Ingrese email"
+                        placeholder="Ingrese el Coreo Electónico"
                         value={email}
                         onChange={onInputChange}
                       />
@@ -193,7 +194,7 @@ export default function Student({ title }) {
                         type="text"
                         className="form-control"
                         name="celular"
-                        placeholder="Ingrese Celular"
+                        placeholder="Ingrese Número Telefónico Celular"
                         value={celular}
                         onChange={onInputChange}
                       />
@@ -201,15 +202,28 @@ export default function Student({ title }) {
                         <ValidateErrors errors={errorsInput.celular} />
                       )}{" "}
                     </div>
+                    {/* <div className="form-group col-md-6">
+                  <label htmlFor="fechaNacimiento">Fecha de Nacimiento</label>
+                  <input
+                    type="date"
+                    className="form-control"
+                    name="fechaNacimiento"
+                    step="1"
+                    value={fechaNacimiento}
+                    min="2013-01-01"
+                    max="fechaNacimiento"
+                    onChange={onInputChange}
+                  />
+                </div> */}
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="password">Contraseña </label>
+                      <label htmlFor="password">Contraseña</label>
                       <input
                         type="password"
                         className="form-control"
                         name="password"
-                        placeholder="Ingrese contraseña"
+                        placeholder="Indique su contraseña"
                         value={password}
                         onChange={onInputChange}
                       />
@@ -219,13 +233,13 @@ export default function Student({ title }) {
                     </div>
                     <div className="form-group col-md-6">
                       <label htmlFor="confirmPassword">
-                        Repita Contraseña
+                        Confirmación de Contraseña
                       </label>
                       <input
                         type="confirmPassword"
                         className="form-control"
                         name="confirmPassword"
-                        placeholder="Repita contraseña"
+                        placeholder="Indique su contraseña"
                         value={confirmPassword}
                         onChange={onInputChange}
                       />
@@ -235,12 +249,12 @@ export default function Student({ title }) {
                     </div>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="adress">Dirección </label>
+                    <label htmlFor="adress">Address</label>
                     <input
                       type="text"
                       className="form-control"
                       name="adress"
-                      placeholder="Ingrese dirección"
+                      placeholder="Indique su dirección principal"
                       value={adress}
                       onChange={onInputChange}
                     />
@@ -248,33 +262,32 @@ export default function Student({ title }) {
 
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="city">Ciudad </label>
+                      <label htmlFor="city">City</label>
                       <input
                         type="text"
                         className="form-control"
                         name="city"
                         value={city}
-                        placeholder="Ingrese ciudad"
                         onChange={onInputChange}
                       />
                     </div>
                     <div className="form-group col-md-4">
-                      <label htmlFor="condicion">Estatus </label>
+                      <label htmlFor="condicion">Estátus</label>
                       <select
                         name="condicion"
                         className="form-control"
                         value={condicion}
                         onChange={onInputChange}
                       >
-                        <option>Seleccionar</option>
-                        <option>Activo</option>
-                        <option>No Activo</option>
+                        <option>Seleccióne opción</option>
+                        <option>Actívo</option>
+                        <option>No Actívo</option>
                       </select>
                     </div>
                   </div>
                   <div className="btn-submit mt-4">
                     {edit ? (
-                      <button type="submit" className="btn btn-success w-100">
+                      <button type="submit" className="btn btn-primary w-100">
                         Actualizar
                       </button>
                     ) : (
