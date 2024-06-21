@@ -14,9 +14,10 @@ const Home = () => {
       <div className="container">
         <MainSection />
         <CardCourse />
+        <br></br>
         <h2 className="mt-5">¡Puede registrarse en nuestros cursos!</h2>
         <hr />
-        <p>Regístrese <Link to={"/register"}>aquí </Link>  y sea parte de nuestro selecto grupo de estudiantes, o también puede contactarnos: </p><br></br><br></br><br></br>
+        <p>Regístrese <Link to={"/register"}>aquí</Link> , y sea parte de nuestro selecto grupo de estudiantes, o también puede contactarnos: </p><br></br><br></br><br></br>
         <Contact />
       </div>
     </>
