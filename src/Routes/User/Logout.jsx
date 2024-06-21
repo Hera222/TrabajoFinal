@@ -38,7 +38,7 @@ function Logout() {
 
 	useEffect(() => {
 		salir();
-	}, []);
+	}, ["/"]);
 	return <div className="h-full" />;
 }
 
