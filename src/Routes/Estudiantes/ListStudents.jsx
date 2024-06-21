@@ -10,7 +10,6 @@ import { useFetch } from "../../hooks/useFetch";
 import { FaTrashAlt } from "react-icons/fa";
 import { TbEdit } from "react-icons/tb";
 import { IoMdAdd } from "react-icons/io";
-// import "./student.css";
 
 export default function ListStudent({ title }) {
   const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
@@ -18,7 +17,6 @@ export default function ListStudent({ title }) {
   const url = `${hostServer}/idapi/v3/students`;
   const ref = useRef(null);
 
-  // const url = "http://localhost:5000/api/students";
   const [selectedItems, setSelectedItems] = useState([]);
   const [page, setPage] = useState(1);
   const [itemsPage, setItemsPage] = useState(8);
@@ -32,7 +30,7 @@ export default function ListStudent({ title }) {
 
   function handleAddstudents() {
     const modalNivel = 2;
-    const tittle = "Adición de Estudiantes";
+    const tittle = "Agregar Estudiantes";
     openModal(
       <Student Student={""} edit={false} riviewList={updateList} />,
       null,
@@ -44,7 +42,7 @@ export default function ListStudent({ title }) {
 
   function handleEdit(student) {
     const modalNivel = 2;
-    const tittle = "Edición de Estudiante";
+    const tittle = "Editar Estudiante";
     openModal(
       <Student student={student} edit={true} riviewList={updateList} />,
       null,
@@ -61,11 +59,10 @@ export default function ListStudent({ title }) {
   const handleDel = async (id) => {
     const url = `${hostServer}/api/v3/student`;
 
-    // const url = "http://localhost:5000/api/student";
     const delId = id;
     Swal.fire({
-      title: "Está Seguro?",
-      text: "Desea eliminar este regístro?",
+      title: "¿Está Seguro?",
+      text: "¿Desea eliminar?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -77,8 +74,8 @@ export default function ListStudent({ title }) {
           const resp = await deleteData(url, delId);
           getStudents();
           await Swal.fire({
-            title: "Eliminádo!",
-            text: "El Estudiante fué eliminádo.",
+            title: "Eliminado!",
+            text: "Estudiante eliminado.",
             icon: "success",
           });
         };
@@ -98,7 +95,6 @@ export default function ListStudent({ title }) {
 
   const getStudents = async () => {
     const url = `${hostServer}/api/v3/students`;
-    // const url = "http://localhost:5000/api/Students";
     const result = await getData(url);
   };
 

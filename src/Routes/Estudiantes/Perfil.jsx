@@ -7,16 +7,14 @@ import { useAppContext } from "../../hooks/appContext";
 import ValidateErrors from "../../componets/services/ValidateErrors";
 import validationSchema from "../../componets/services/validationSchema";
 
-// import "./student.css";
-
 export default function Perfil({ title }) {
   const { HandleNivelClose } = useAppContext();
-  const api = "http://localhost:5000/api/student";
+  const api = `${hostServer}/api/v3/student`;
   const [error, setError] = useState(false);
   const [edit, setEdit] = useState(true);
   const [student, setStudent] = useState({});
   let initialForm = {
-    id: student ? student.id : "",
+    id: student ? student._id : "",
     dni: student ? student.dni : "",
     nombre: student ? student.nombre : "",
     apellido: student ? student.apellido : "",
@@ -24,7 +22,6 @@ export default function Perfil({ title }) {
     password: student ? student.pasword : "",
     confirmPassword: "",
     adress: student ? student.adress : "",
-    fechaNacimiento: student ? student.fechaNacimiento : new Date("2023/12/31"),
     city: student ? student.city : "",
     celular: student ? student.celular : "",
     condicion: student ? student.condicion : "",
@@ -48,7 +45,6 @@ export default function Perfil({ title }) {
     password,
     confirmPassword,
     celular,
-    fechaNacimiento,
     adress,
     city,
     condicion,
@@ -67,16 +63,12 @@ export default function Perfil({ title }) {
     const numError = validateForm();
     if (!numError) {
       let url = `${api}`;
-      // if (!edit) {
-      //   await createData(url, formData);
-      // } else {
-      await updateData(url, student.id, formData);
-      // }
+      await updateData(url, student._id, formData);
     } else {
       Swal.fire({
         position: "top",
         icon: "info",
-        title: "Debes corregir la información para poder registrarla",
+        title: "Debe corregir la información para poder registrarla",
         showConfirmButton: false,
         timer: 5000,
       });
@@ -84,7 +76,7 @@ export default function Perfil({ title }) {
   };
 
   const getStudent = async (event) => {
-    let url = `http://localhost:5000/api/studentdni/${event.target.value}`;
+    let url = `${hostServer}/api/studentdni/${event.target.value}`;
     const responseData = await getData(url);
     if (async () => await responseData) {
       setStudent(responseData?.data.data);
@@ -104,14 +96,6 @@ export default function Perfil({ title }) {
     } else {
       if (data?.status === 200 || data?.status === 201) {
         setStudent(data?.data.data);
-        // data?.data.message &&
-        //   Swal.fire({
-        //     position: "top",
-        //     icon: "success",
-        //     title: data?.data?.message,
-        //     showConfirmButton: false,
-        //     timer: 3500,
-        //   });
       } else {
         data?.data.message &&
           Swal.fire({
@@ -131,8 +115,6 @@ export default function Perfil({ title }) {
 
   useEffect(() => {
     fillForm(student);
-    // alert("aqui");
-    // setEdit(true);
   }, [student]);
 
   return (
@@ -157,6 +139,7 @@ export default function Perfil({ title }) {
                         className="form-control"
                         name="dni"
                         value={dni}
+                        placeholder="Ingrese DNI"
                         onBlur={getStudent}
                         disabled={edit} // Deshabilitar el input si edit es true
                       />
@@ -167,7 +150,7 @@ export default function Perfil({ title }) {
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="nombre">Nombre </label>
+                      <label htmlFor="nombre">Nombres </label>
                       <input
                         type="text"
                         className="form-control"
@@ -181,7 +164,7 @@ export default function Perfil({ title }) {
                       )}{" "}
                     </div>
                     <div className="form-group col-md-6">
-                      <label htmlFor="inputName">Apelliodos </label>
+                      <label htmlFor="inputName">Apellidos </label>
                       <input
                         type="text"
                         className="form-control"
@@ -197,12 +180,12 @@ export default function Perfil({ title }) {
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="email">Correo Electrónico</label>
+                      <label htmlFor="email">Email </label>
                       <input
                         type="email"
                         className="form-control"
                         name="email"
-                        placeholder="Ingrese el Coreo Electónico"
+                        placeholder="Ingrese email"
                         value={email}
                         onChange={onInputChange}
                       />
@@ -216,7 +199,7 @@ export default function Perfil({ title }) {
                         type="text"
                         className="form-control"
                         name="celular"
-                        placeholder="Ingrese Número Telefónico Celular"
+                        placeholder="Ingrese Celular"
                         value={celular}
                         onChange={onInputChange}
                       />
@@ -224,28 +207,15 @@ export default function Perfil({ title }) {
                         <ValidateErrors errors={errorsInput.celular} />
                       )}{" "}
                     </div>
-                    {/* <div className="form-group col-md-6">
-                  <label htmlFor="fechaNacimiento">Fecha de Nacimiento</label>
-                  <input
-                    type="date"
-                    className="form-control"
-                    name="fechaNacimiento"
-                    step="1"
-                    value={fechaNacimiento}
-                    min="2013-01-01"
-                    max="fechaNacimiento"
-                    onChange={onInputChange}
-                  />
-                </div> */}
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="password">Contraseña</label>
+                      <label htmlFor="password">Contraseña </label>
                       <input
                         type="password"
                         className="form-control"
                         name="password"
-                        placeholder="Indique su contraseña"
+                        placeholder="Ingrese contraseña"
                         value={password}
                         onChange={onInputChange}
                       />
@@ -255,13 +225,13 @@ export default function Perfil({ title }) {
                     </div>
                     <div className="form-group col-md-6">
                       <label htmlFor="confirmPassword">
-                        Confirmación de Contraseña
+                        Repita Contraseña 
                       </label>
                       <input
                         type="confirmPassword"
                         className="form-control"
                         name="confirmPassword"
-                        placeholder="Indique su contraseña"
+                        placeholder="Repita contraseña"
                         value={confirmPassword}
                         onChange={onInputChange}
                       />
@@ -271,12 +241,12 @@ export default function Perfil({ title }) {
                     </div>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="adress">Address</label>
+                    <label htmlFor="adress">Dirección </label>
                     <input
                       type="text"
                       className="form-control"
                       name="adress"
-                      placeholder="Indique su dirección principal"
+                      placeholder="Ingrese dirección"
                       value={adress}
                       onChange={onInputChange}
                     />
@@ -284,32 +254,33 @@ export default function Perfil({ title }) {
 
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="city">City</label>
+                      <label htmlFor="city">Ciudad </label>
                       <input
                         type="text"
                         className="form-control"
                         name="city"
+                        placeholder="Ingrese ciudad"
                         value={city}
                         onChange={onInputChange}
                       />
                     </div>
                     <div className="form-group col-md-4">
-                      <label htmlFor="condicion">Estátus</label>
+                      <label htmlFor="condicion">Estatus</label>
                       <select
                         name="condicion"
                         className="form-control"
                         value={condicion}
                         onChange={onInputChange}
                       >
-                        <option>Seleccióne opción</option>
-                        <option>Actívo</option>
-                        <option>No Actívo</option>
+                        <option>Seleccionar</option>
+                        <option>Activo</option>
+                        <option>No Activo</option>
                       </select>
                     </div>
                   </div>
                   <div className="btn-submit mt-4">
                     {edit ? (
-                      <button type="submit" className="btn btn-primary w-100">
+                      <button type="submit" className="btn btn-success w-100">
                         Actualizar
                       </button>
                     ) : (
