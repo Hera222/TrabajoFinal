@@ -9,12 +9,13 @@ import validationSchema from "../../componets/services/validationSchema";
 
 export default function Perfil({ title }) {
   const { HandleNivelClose } = useAppContext();
+  const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const api = `${hostServer}/api/v3/student`;
   const [error, setError] = useState(false);
   const [edit, setEdit] = useState(true);
   const [student, setStudent] = useState({});
   let initialForm = {
-    id: student ? student._id : "",
+    id: student ? student._id : null,
     dni: student ? student.dni : "",
     nombre: student ? student.nombre : "",
     apellido: student ? student.apellido : "",

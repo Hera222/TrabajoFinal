@@ -29,7 +29,7 @@ const routes = [
   },
   {
     path: "/perfil",
-    element: <Perfil title={"Modicicación del Perfil de Estudiantes"} />,
+    element: <Perfil title={"Modificación de Estudiantes"} />,
   },
   {
     path: "/teachers",
@@ -53,7 +53,7 @@ const routes = [
   },
   {
     path: "/login",
-    element: <Login title={"Logín"} />,
+    element: <Login title={"Login"} />,
   },
   { path: "/salir", element: <Logout /> },
   { path: "/cambioClave", element: <Cambio /> },

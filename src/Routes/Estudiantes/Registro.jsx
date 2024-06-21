@@ -11,11 +11,11 @@ export default function Student({ title }) {
   const edit = false;
   const student = [];
   const { HandleNivelClose } = useAppContext();
-  //const api = "http://localhost:5000/api/student";
+  const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const api = `${hostServer}/api/v3/student`;
   const [error, setError] = useState(false);
   const initialForm = {
-    id: student ? student.id : "",
+    id: student ? student._id : null,
     dni: student ? student.dni : "",
     nombre: student ? student.nombre : "",
     apellido: student ? student.apellido : "",
@@ -23,7 +23,6 @@ export default function Student({ title }) {
     password: student ? student.pasword : "",
     confirmPassword: "",
     adress: student ? student.adress : "",
-    fechaNacimiento: student ? student.fechaNacimiento : new Date("2023/12/31"),
     city: student ? student.city : "",
     celular: student ? student.celular : "",
     condicion: student ? student.condicion : "",
@@ -41,7 +40,6 @@ export default function Student({ title }) {
     password,
     confirmPassword,
     celular,
-    fechaNacimiento,
     adress,
     city,
     condicion,
@@ -63,7 +61,7 @@ export default function Student({ title }) {
       if (!edit) {
         await createData(url, formData);
       } else {
-        await updateData(url, student.id, formData);
+        await updateData(url, student._id, formData);
       }
     } else {
       Swal.fire({
@@ -203,19 +201,6 @@ export default function Student({ title }) {
                         <ValidateErrors errors={errorsInput.celular} />
                       )}{" "}
                     </div>
-                    {/* <div className="form-group col-md-6">
-                  <label htmlFor="fechaNacimiento">Fecha de Nacimiento</label>
-                  <input
-                    type="date"
-                    className="form-control"
-                    name="fechaNacimiento"
-                    step="1"
-                    value={fechaNacimiento}
-                    min="2013-01-01"
-                    max="fechaNacimiento"
-                    onChange={onInputChange}
-                  />
-                </div> */}
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
@@ -273,7 +258,7 @@ export default function Student({ title }) {
                       />
                     </div>
                     <div className="form-group col-md-4">
-                      <label htmlFor="condicion">Estátus</label>
+                      <label htmlFor="condicion">Estatus</label>
                       <select
                         name="condicion"
                         className="form-control"
