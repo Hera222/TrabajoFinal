@@ -231,6 +231,7 @@ footer h3{
   } 
   .prinSection {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
   }
   .contact {
