@@ -67,7 +67,7 @@ export default function Student({ title }) {
       Swal.fire({
         position: "top",
         icon: "info",
-        title: "Debes corregir la información para poder registrarla",
+        title: "Debe corregir la información para poder registrarla",
         showConfirmButton: false,
         timer: 5000,
       });
@@ -134,6 +134,7 @@ export default function Student({ title }) {
                         type="text"
                         className="form-control"
                         name="dni"
+                        placeholder="DNI"
                         value={dni}
                         onChange={onInputChange}
                       />
@@ -158,7 +159,7 @@ export default function Student({ title }) {
                       )}{" "}
                     </div>
                     <div className="form-group col-md-6">
-                      <label htmlFor="inputName">Apelliodos </label>
+                      <label htmlFor="inputName">Apellidos </label>
                       <input
                         type="text"
                         className="form-control"
@@ -174,12 +175,12 @@ export default function Student({ title }) {
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="email">Correo Electrónico</label>
+                      <label htmlFor="email">Email </label>
                       <input
                         type="email"
                         className="form-control"
                         name="email"
-                        placeholder="Ingrese el Coreo Electónico"
+                        placeholder="Ingrese email"
                         value={email}
                         onChange={onInputChange}
                       />
@@ -193,7 +194,7 @@ export default function Student({ title }) {
                         type="text"
                         className="form-control"
                         name="celular"
-                        placeholder="Ingrese Número Telefónico Celular"
+                        placeholder="Ingrese Celular"
                         value={celular}
                         onChange={onInputChange}
                       />
@@ -204,12 +205,12 @@ export default function Student({ title }) {
                   </div>
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="password">Contraseña</label>
+                      <label htmlFor="password">Contraseña </label>
                       <input
                         type="password"
                         className="form-control"
                         name="password"
-                        placeholder="Indique su contraseña"
+                        placeholder="Ingrese contraseña"
                         value={password}
                         onChange={onInputChange}
                       />
@@ -219,13 +220,13 @@ export default function Student({ title }) {
                     </div>
                     <div className="form-group col-md-6">
                       <label htmlFor="confirmPassword">
-                        Confirmación de Contraseña
+                      Repita contraseña 
                       </label>
                       <input
                         type="confirmPassword"
                         className="form-control"
                         name="confirmPassword"
-                        placeholder="Indique su contraseña"
+                        placeholder="Repita contraseña"
                         value={confirmPassword}
                         onChange={onInputChange}
                       />
@@ -235,12 +236,12 @@ export default function Student({ title }) {
                     </div>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="adress">Address</label>
+                    <label htmlFor="adress">Dirección </label>
                     <input
                       type="text"
                       className="form-control"
                       name="adress"
-                      placeholder="Indique su dirección principal"
+                      placeholder="Ingrese dirección"
                       value={adress}
                       onChange={onInputChange}
                     />
@@ -248,32 +249,33 @@ export default function Student({ title }) {
 
                   <div className="row">
                     <div className="form-group col-md-6">
-                      <label htmlFor="city">City</label>
+                      <label htmlFor="city">Ciudad </label>
                       <input
                         type="text"
                         className="form-control"
                         name="city"
                         value={city}
+                        placeholder="Ingrese ciudad"
                         onChange={onInputChange}
                       />
                     </div>
                     <div className="form-group col-md-4">
-                      <label htmlFor="condicion">Estatus</label>
+                      <label htmlFor="condicion">Estatus </label>
                       <select
                         name="condicion"
                         className="form-control"
                         value={condicion}
                         onChange={onInputChange}
                       >
-                        <option>Seleccióne opción</option>
-                        <option>Actívo</option>
-                        <option>No Actívo</option>
+                        <option>Seleccionar</option>
+                        <option>Activo</option>
+                        <option>No Activo</option>
                       </select>
                     </div>
                   </div>
                   <div className="btn-submit mt-4">
                     {edit ? (
-                      <button type="submit" className="btn btn-primary w-100">
+                      <button type="submit" className="btn btn-success w-100">
                         Actualizar
                       </button>
                     ) : (
