@@ -12,28 +12,10 @@ function Logout() {
 
 	let { data, isLoading = false, getData } = useFetch(null);
 
-	const salir = async () => {
-		const result = await getData(url);
-		if (result?.status === 200) {
-			Swal.fire({
-				position: 'top',
-				icon: 'success',
-				title: data?.data.message,
-				showConfirmButton: false,
-				timer: 3500,
-			});
-			setUsersContext([]);
-			navigate('/');
-			window.location.reload(true);
-		} else {
-			Swal.fire({
-				position: 'top',
-				icon: 'info',
-				title: 'Debe corregir la información para loguearse',
-				showConfirmButton: false,
-				timer: 5000,
-			});
-		}
+	const salir = async () => {		
+		setUsersContext([]);
+		navigate('/');
+		window.location.reload(true);
 	};
 
 	useEffect(() => {
